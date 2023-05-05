@@ -166,3 +166,50 @@ h1 {
     padding: 0.5rem;
 
 }
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.parallax img{
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    pointer-events: none;
+}
+
+#aboutteks {
+    position: absolute;
+    
+    left: 50%;
+    transform: translate(-50%, -60%); 
+  }
+
+.sec{
+    position: relative;
+    margin-top: 10%;
+    padding: 100px;
+    background: #040228;
+}
+
+.sec h2{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom:10px;
+}
+
+.sec h2:nth-child(2){
+    font-size: 2em;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
