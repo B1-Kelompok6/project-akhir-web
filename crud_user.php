@@ -44,7 +44,45 @@ $result = mysqli_query($conn, $query);
             <li><a href="riwayat_pembelian.php">Riwayat Pembelian</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
-  </div>
+    </nav>
+    <div class="table-danger">
+        <table>
+            <thead>
+            <tr class="table-judul">           
+              <th>No</th>
+              <th><a style="color:orange" href="?sort=username">Username</a></th>
+              <th><a style="color:orange" href="?sort=email">Email</a></th>
+              <th>Password</th>
+              <th><a style="color:orange" href="?sort=role">Role</a></th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <?php
+              $i=1;
+              while($row = mysqli_fetch_assoc($result)){
+            ?>
+            <tr>
+                <td><?php echo $i?></td>
+                <td><?php echo $row['username']?></td>
+                <td><?php echo $row['email']?></td>
+                <td><?php echo $row['password']?></td>
+                <td><?php echo $row['role']?></td>
+                <td>
+                    <a href="crud_user/update.php?id=<?php echo $row['id_user']?>" class="btn-danger" role="button">Update</a>
+                    <a href="crud_user/delete.php?id=<?php echo $row['id_user']?>" class="btn-warning" role="button">Delete</a>
+                </td>
+            </tr>
+            <?php
+            $i++;
+            }
+            ?>
+        </table>
+        <br>
+        <div class ="tes">
+        <a href="crud_user/create.php" class="btn-primary">Add Data</a>
+        <a href="crud_user.php" class=btn-secondary>Refresh</a>
+        </div>
+    </div>
   </div>
 </body>
 </html>
