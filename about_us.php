@@ -27,15 +27,15 @@
     </section>
 
     <section class="sec">
-        <h2>TIX</h2>
+        <h2>Cinema <span>KW</span></h2>
         <p>
-            TIX ID platform entertainment di mana pengguna dapat membeli tiket offline melalui aplikasi menggunakan pembayaran DANA. 
-            TIX ID adalah perusahaan patungan antara Alipay & Emtek. TIX ID adalah satu-satunya perusahaan yang bermitra dengan CinemaXXI 
-            untuk menjual tiket film kepada pengguna secara online. Dengan pangsa pasar Cinema XXI sebesar 70% secara nasional, 
-            TIX ID akan menjadi platform untuk membeli tiket film untuk bioskop di dekat kalian.<br><br>
-            Sebenarnya sudah sangat banyak platform atau tempat jual beli tiket nonton bioskop online di indonesia, 
-            tetapi TIX ID ini adalah salah satu yang paling besar karena penggunanya yang sangat banyak. 
-            Aplikasinya sangat optimal sehingga banyak digunakan oleh banyak orang dan mendapat rating yang bagus di playstore ataupun app store
+        Cinema KW adalah sebuah aplikasi tiket bioskop yang memungkinkan pengguna untuk dengan mudah membeli tiket bioskop 
+        dari kenyamanan rumah mereka sendiri. Aplikasi ini memberikan pengguna akses ke jadwal film terbaru di berbagai 
+        bioskop terkemuka di seluruh kota. Pengguna dapat melihat daftar film, lokasi bioskop, jadwal penayangan, 
+        harga tiket, dan tempat duduk yang tersedia dalam satu aplikasi.<br><br>
+        Cinema KW menawarkan pengalaman beli tiket yang nyaman, cepat, dan aman. 
+        Dengan antarmuka yang mudah dipahami, aplikasi ini cocok untuk pengguna dari segala usia dan latar belakang. 
+        Jadi tunggu apa lagi? Gunakan website Cinema KW sekarang dan nikmati pengalaman menonton film yang menyenangkan dengan mudah dan cepat!
         </p>
     </section>
 
