@@ -27,11 +27,12 @@ $row = mysqli_fetch_assoc($result);
 <head>
     <title>Update Data</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="crud_user.css">
+    <!-- <link rel="stylesheet" href="crud_user.css"> -->
 </head>
 <body>
     <div class="container">
-        <h2>Update Data User</h2>
+        <br>
+        <center><h2>Update Data User</h2></center>
         <form action="" method="post">
             <div class="form-group">
                 <input type="hidden" name="id_user" value="<?php echo $row['id_user'] ?>">
