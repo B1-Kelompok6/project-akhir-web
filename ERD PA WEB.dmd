@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ERD PA WEB" id="E5748397-8699-DF9F-517C-7FB4C2F56016" version="3.5">
+<createdBy>Namira</createdBy>
+<createdTime>2023-04-29 11:53:02 UTC</createdTime>
+<ownerDesignName>ERD PA WEB</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E5748397-8699-DF9F-517C-7FB4C2F56016</designId>
+</OSDM_Design>
