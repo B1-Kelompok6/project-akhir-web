@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2023 at 02:59 PM
+-- Generation Time: May 06, 2023 at 08:16 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -24,14 +24,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `promo`
+-- Table structure for table `bioskop`
 --
 
-CREATE TABLE `promo` (
-  `kode_promo` int(11) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `total_promo` int(11) NOT NULL,
-  `id_tiket` int(11) NOT NULL
+CREATE TABLE `bioskop` (
+  `id_bioskop` int(11) NOT NULL,
+  `nama_bioskop` varchar(20) NOT NULL,
+  `domisili_bioksop` varchar(20) NOT NULL,
+  `alamat_bioskop` varchar(30) NOT NULL,
+  `telp_bioskop` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -57,7 +58,6 @@ CREATE TABLE `riwayat_pemesanan` (
   `id_pemesanan` int(11) NOT NULL,
   `metode_pembayaran` varchar(30) NOT NULL,
   `tgl_pemesanan` datetime NOT NULL,
-  `kode_promo` int(11) NOT NULL,
   `id_tiket` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -103,45 +103,32 @@ CREATE TABLE `user` (
   `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `role` varchar(20) NOT NULL
+  `role` varchar(20) NOT NULL,
+  `id_bioskop` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `role`) VALUES
-(1, 'ryanda', 'ryanda@gmail.com', '123', 'pembeli'),
-(2, 'nami', 'nami@gmail.com', '123', 'staff'),
-(3, 'eggy', 'eggy@gmail.com', '123', 'admin'),
-(4, 'brillian', 'brillian@gmail.com', '123', 'pembeli');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `promo`
+-- Indexes for table `bioskop`
 --
-ALTER TABLE `promo`
-  ADD PRIMARY KEY (`kode_promo`),
-  ADD KEY `fk_idtiket` (`id_tiket`);
+ALTER TABLE `bioskop`
+  ADD PRIMARY KEY (`id_bioskop`);
 
 --
 -- Indexes for table `review`
 --
 ALTER TABLE `review`
-  ADD PRIMARY KEY (`id_rate`),
-  ADD KEY `fk_tiket` (`id_tiket`);
+  ADD PRIMARY KEY (`id_rate`);
 
 --
 -- Indexes for table `riwayat_pemesanan`
 --
 ALTER TABLE `riwayat_pemesanan`
   ADD PRIMARY KEY (`id_pemesanan`),
-  ADD UNIQUE KEY `id_pemesanan` (`id_pemesanan`),
-  ADD KEY `fk_id_tiket` (`id_tiket`),
-  ADD KEY `fk_kode_promo` (`kode_promo`);
+  ADD UNIQUE KEY `id_pemesanan` (`id_pemesanan`);
 
 --
 -- Indexes for table `tiket`
@@ -156,17 +143,12 @@ ALTER TABLE `tiket`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`),
   ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD KEY `fk_id_bioskop` (`id_bioskop`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `promo`
---
-ALTER TABLE `promo`
-  MODIFY `kode_promo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `review`
@@ -197,23 +179,10 @@ ALTER TABLE `user`
 --
 
 --
--- Constraints for table `promo`
+-- Constraints for table `user`
 --
-ALTER TABLE `promo`
-  ADD CONSTRAINT `fk_idtiket` FOREIGN KEY (`id_tiket`) REFERENCES `tiket` (`id_tiket`);
-
---
--- Constraints for table `review`
---
-ALTER TABLE `review`
-  ADD CONSTRAINT `fk_tiket` FOREIGN KEY (`id_tiket`) REFERENCES `tiket` (`id_tiket`);
-
---
--- Constraints for table `riwayat_pemesanan`
---
-ALTER TABLE `riwayat_pemesanan`
-  ADD CONSTRAINT `fk_id_tiket` FOREIGN KEY (`id_tiket`) REFERENCES `tiket` (`id_tiket`),
-  ADD CONSTRAINT `fk_kode_promo` FOREIGN KEY (`kode_promo`) REFERENCES `promo` (`kode_promo`);
+ALTER TABLE `user`
+  ADD CONSTRAINT `fk_id_bioskop` FOREIGN KEY (`id_bioskop`) REFERENCES `bioskop` (`id_bioskop`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
