@@ -12,7 +12,7 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Tiket Nonton Bioskop</title>
+  <title>Ticket</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -43,7 +43,7 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
         </nav>
 
         <?php
-        $query = mysqli_query($conn, "SELECT * FROM tiket");
+        $query = mysqli_query($conn, "SELECT * FROM tiket WHERE rilis <= CURDATE()");
 
         // Cek apakah ada data
         if (mysqli_num_rows($query) > 0) {
@@ -65,8 +65,6 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
                             <p><?php echo $data['rating']; ?></p>
                             <p><?php echo $data['studio']; ?></p>
                         </div>
-                        <!-- <p><strong>Jadwal Tayang:</strong> <?php echo $data['jadwal_tayang']; ?></p>
-                        <p><strong>Harga Tiket:</strong> Rp<?php echo number_format($data['harga_tiket'], 0, ',', '.'); ?></p> -->
                     </div>
                 </div>
                 <?php

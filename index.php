@@ -27,7 +27,7 @@
         include 'koneksi.php';
 
         // Mengambil data dari tabel tiket_nonton_bioskop
-        $query = mysqli_query($conn, "SELECT * FROM tiket");
+        $query = mysqli_query($conn, "SELECT * FROM tiket where rilis <= CURDATE()");
 
         // Cek apakah ada data
         if (mysqli_num_rows($query) > 0) {
@@ -39,7 +39,7 @@
                 ?>
                 <div class="tiket-item">
                     <?php $gambar = base64_encode($data['poster']);?>
-                    <a href="detail_tiket.php">
+                    <a href="detail_page1.php">
                         <img src="data:image/jpeg;base64,<?php echo $gambar; ?>" alt="Poster Film">
                     </a>
                     <div class="tiket-info">
@@ -49,8 +49,6 @@
                             <p><?php echo $data['rating']; ?></p>
                             <p><?php echo $data['studio']; ?></p>
                         </div>
-                        <!-- <p><strong>Jadwal Tayang:</strong> <?php echo $data['jadwal_tayang']; ?></p>
-                        <p><strong>Harga Tiket:</strong> Rp<?php echo number_format($data['harga_tiket'], 0, ',', '.'); ?></p> -->
                     </div>
                 </div>
                 <?php

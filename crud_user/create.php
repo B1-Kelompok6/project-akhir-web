@@ -26,7 +26,7 @@ if(isset($_GET['add'])){
 <head>
     <title>Create </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="crud_user.css"> -->
+    <a href=""></a>
 </head>
 <body>
 <div class="container">
@@ -52,10 +52,11 @@ if(isset($_GET['add'])){
             <label>Role:</label>
             <input type="text" name="role" class="form-control" placeholder="Masukan password" required/>
         </div>
-            <button style="margin-top:10px" type="submit" name="add" class="btn btn-primary">Submit</button>
-            <?php if($error != ''){ ?>
-                <div style="color:red; text-align:right;" ><?php echo $error; ?></div>
-            <?php } ?>
+        <button type="submit" name="add" class="btn btn-primary">Submit</button>
+        <a href="../crud_user.php" class="btn btn-secondary">Batal</a>
+        <?php if($error != ''){ ?>
+            <div style="color:red; text-align:right;" ><?php echo $error; ?></div>
+        <?php } ?>
     </form>
 </div>
 </body>
