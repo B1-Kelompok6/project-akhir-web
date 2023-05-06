@@ -21,3 +21,47 @@
             </ul>
         </nav>
     </div>
+    <?php
+        // Menghubungkan ke database
+        include 'koneksi.php';
+
+        // Mengambil data dari tabel tiket_nonton_bioskop
+        $query = mysqli_query($conn, "SELECT * FROM tiket");
+
+        // Cek apakah ada data
+        if (mysqli_num_rows($query) > 0) {
+            ?>
+            <div class="tiket-container">
+            <?php
+            // Looping data dari tabel tiket_nonton_bioskop
+            while ($data = mysqli_fetch_array($query)) {
+                ?>
+                <div class="tiket-item">
+                    <?php $gambar = base64_encode($data['poster']);?>
+                    <a href="detail_tiket.php">
+                        <img src="data:image/jpeg;base64,<?php echo $gambar; ?>" alt="Poster Film">
+                    </a>
+                    <div class="tiket-info">
+                        <h2><?php echo $data['judul_film']; ?></h2>
+                        <br>
+                        <div class="tiket-a">
+                            <p><?php echo $data['rating']; ?></p>
+                            <p><?php echo $data['studio']; ?></p>
+                        </div>
+                        <!-- <p><strong>Jadwal Tayang:</strong> <?php echo $data['jadwal_tayang']; ?></p>
+                        <p><strong>Harga Tiket:</strong> Rp<?php echo number_format($data['harga_tiket'], 0, ',', '.'); ?></p> -->
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+            </div>
+            <?php
+        } else {
+            echo "Tidak ada data tiket nonton bioskop.";
+        }
+        mysqli_close($conn);
+        ?>
+    </div>
+</body>
+</html>
