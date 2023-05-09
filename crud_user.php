@@ -1,25 +1,36 @@
 <?php 
 include 'koneksi.php';
-if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'staff')){
+
+if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'admin')){
   header("Location: login.php");
   exit();
 }
 
+$query = "SELECT * FROM user";
+
+if (isset($_GET['search'])) {
+  $search = mysqli_real_escape_string($conn, $_GET['search']);
+  $query .= " WHERE username LIKE '%$search%' OR email LIKE '%$search%'";
+}
 
 // cek apakah parameter sort di-set
 if (isset($_GET['sort'])) {
-  // jika parameter sort di-set, ambil nilai sort
-  $sort = $_GET['sort'];
-
-  // buat query SQL dengan perintah ORDER BY sesuai dengan nilai sort
-  $query = "SELECT * FROM user ORDER BY $sort";
-} else {
-  // jika parameter sort tidak di-set, tampilkan data tanpa pengurutan
-  $query = "SELECT * FROM user";
+  // jika parameter sort di-set, ambil nilai sort dan pastikan hanya memilih kolom yang valid
+  $valid_columns = array('username', 'email', 'role');
+  $sort = mysqli_real_escape_string($conn, $_GET['sort']);
+  if (in_array($sort, $valid_columns)) {
+    // buat query SQL dengan perintah ORDER BY sesuai dengan nilai sort
+    $query .= " ORDER BY $sort";
+  }
 }
 
 $result = mysqli_query($conn, $query);
+
+if (!$result) {
+  die("Query failed: " . mysqli_error($conn));
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +38,8 @@ $result = mysqli_query($conn, $query);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="crud_user/crud_user.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/crud.css">
     <title>Document</title>
 </head>
 <body>
@@ -38,15 +49,28 @@ $result = mysqli_query($conn, $query);
             <div class="fname">Cinema</div>
             <div class="lname">KW</div>
         </div>
-        <ul class="nav">
-            <li><a href="crud_tiket.php">Data Tiket</a></li>
-            <li><a href="crud_user.php" class="active">Data User</a></li>
-            <li><a href="riwayat_pembelian.php">Riwayat Pembelian</a></li>
-            <li><a href="logout.php">Logout</a></li>
-        </ul>
+        <?php if($_SESSION['role'] == 'admin'): ?>
+            <ul class="nav">
+              <li><a href="crud_tiket.php">Data Tiket</a></li>
+              <li><a href="crud_user.php" class="active">Data User</a></li>
+              <li><a href="logout.php">Logout</a></li>
+            </ul>
+            <?php else: ?>
+            <ul class="nav">
+              <li><a href="crud_tiket.php" class="active">Data Tiket</a></li>
+              <li><a href="riwayat_pembelian.php">Riwayat Pembelian</a></li>
+              <li><a href="logout.php">Logout</a></li>
+            </ul>
+            <?php endif; ?>
     </nav>
-    <div class="table-danger">
-        <table>
+    <div class="table-user">
+        <form method="GET" action="">
+          <div class="search-container">
+            <input type="text" name="search" placeholder="Search..." class="search-input">
+            <button type="submit" class="search-button">Search</button>
+          </div>
+        </form>
+        <table class="tabel">
             <thead>
             <tr class="table-judul">           
               <th>No</th>

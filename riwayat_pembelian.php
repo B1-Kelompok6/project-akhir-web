@@ -1,6 +1,7 @@
 <?php 
 include 'koneksi.php';
-if(!isset($_SESSION['email']) || $_SESSION['role'] != 'admin'){
+
+if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'staff')){
   header("Location: login.php");
   exit();
 }
@@ -26,9 +27,9 @@ $result = mysqli_query($conn, $query);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <!-- <link rel="stylesheet" href="crud_user/crud_user.css"> -->
-    <title>Document</title>
+    <title>Riwayat Pembelian</title>
 </head>
 <body>
     <div class="container">
@@ -38,10 +39,9 @@ $result = mysqli_query($conn, $query);
                 <div class="lname">KW</div>
             </div>
             <ul class="nav">
-                <li><a href="crud_tiket.php">Data Tiket</a></li>
-                <li><a href="crud_user.php">Data User</a></li>
-                <li><a href="riwayat_pembelian.php" class="active">Riwayat Pembelian</a></li>
-                <li><a href="logout.php">Logout</a></li>
+              <li><a href="crud_tiket.php">Data Tiket</a></li>
+              <li><a href="riwayat_pembelian.php" class="active">Riwayat Pembelian</a></li>
+              <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
     </div>
