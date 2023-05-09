@@ -27,7 +27,7 @@
     </section>
 
     <section class="sec">
-        <h2>Cinema <span>KW</span></h2>
+        <h2>Cinema<span>KW</span></h2>
         <p>
         Cinema KW adalah sebuah aplikasi tiket bioskop yang memungkinkan pengguna untuk dengan mudah membeli tiket bioskop 
         dari kenyamanan rumah mereka sendiri. Aplikasi ini memberikan pengguna akses ke jadwal film terbaru di berbagai 

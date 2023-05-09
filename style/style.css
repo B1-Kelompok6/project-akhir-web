@@ -31,6 +31,7 @@ body{
     height: 70px;
     background-color:rgb(21, 21, 46);
     box-shadow: 0 7px 20px 0 black;
+    z-index: 1; /* add z-index value */
 }
 
 .prof{
@@ -173,20 +174,20 @@ h1 {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    z-index: 0; 
 }
 
-.parallax img{
+.parallax img {
     position: absolute;
     align-items: center;
-    top: 0;
+    top: -100px; 
     left: 0;
-    /* width: 100%; */
     pointer-events: none;
+    z-index: -1; 
 }
 
 #aboutteks {
     position: absolute;
-    
     left: 50%;
     transform: translate(-50%, -60%); 
   }
@@ -199,9 +200,18 @@ h1 {
 }
 
 .sec h2{
-    font-size: 3em;
-    color: #fff;
+    color: aliceblue;
+    font-weight: 700;
+    font-family: "Forte", "san-serif";
+    font-size: 40px;
     margin-bottom:10px;
+}
+
+.sec span{
+    color: orange;
+    font-weight: 400px;
+    font-family: "Forte", "san-serif";
+    font-size: 40px;
 }
 
 .sec h2:nth-child(2){
