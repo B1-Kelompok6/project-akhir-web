@@ -66,6 +66,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .nav li{
@@ -76,12 +77,12 @@ body{
 .nav li a{
     color: aliceblue;
     font-size: 20px;
-    padding-left: 10px;
     text-decoration: none;
 
 }
 
 .nav li a:hover{
+    text-align: center;
     color: orange;
     transition: all .2s ease-in-out;
 }
@@ -89,6 +90,7 @@ body{
 .active{
     color: rgb(0, 0, 0) !important;
     background-color:orange;
+    border-radius: 5px;
     padding: 15px;
 }
 
@@ -149,10 +151,7 @@ h1 {
 
 .tiket-a{
     width: 213px;
-    /* margin-top: 20px; */
-    /* border: 2px solid black; */
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     bottom: 25px;
     position: absolute;

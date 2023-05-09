@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
         if ($user['role'] == 'pembeli') {
             header('Location: user_page.php');
         } else if ($user['role'] == 'staff') {
-            header('Location: staff_page.php');
+            header('Location: crud_tiket.php');
         } else if ($user['role'] == 'admin') {
             header('Location: crud_tiket.php');
         }
@@ -50,7 +50,7 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style/login.css">
 </head>
     <body>
         <div class='login'>
