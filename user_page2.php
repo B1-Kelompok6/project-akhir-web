@@ -13,7 +13,7 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Up Coming</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div class="container">
@@ -37,13 +37,14 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
             </div>
             <ul class="nav">
                 <li><a href="user_page.php">Now Playing</a></li>
-                <li><a href="upcoming_page.php" class="active">Up Coming</a></li> 
+                <li><a href="user_page2.php" class="active">Up Coming</a></li> 
+                <li><a href="user_page3.php">About Us</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
 
         <?php
-        $query = mysqli_query($conn, "SELECT * FROM tiket WHERE rilis > CURDATE()");
+        $query = mysqli_query($conn, "SELECT * FROM tiket WHERE status_film = 'playing'");
 
         // Cek apakah ada data
         if (mysqli_num_rows($query) > 0) {

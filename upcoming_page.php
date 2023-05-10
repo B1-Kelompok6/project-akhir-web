@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Up Coming</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div class="container">
@@ -26,7 +26,7 @@
             include 'koneksi.php';
 
             // Mengambil data dari tabel tiket_nonton_bioskop
-            $query = mysqli_query($conn, "SELECT * FROM tiket WHERE rilis > CURDATE()");
+            $query = mysqli_query($conn, "SELECT * FROM tiket WHERE status_film = 'soon'");
 
         // Cek apakah ada data
         if (mysqli_num_rows($query) > 0) {

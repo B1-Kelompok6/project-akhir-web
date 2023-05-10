@@ -26,7 +26,6 @@ if(isset($_GET['add'])){
 <head>
     <title>Create </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <a href=""></a>
 </head>
 <body>
 <div class="container">
@@ -43,7 +42,6 @@ if(isset($_GET['add'])){
             <label>Email :</label>
             <input type="email" name="email" class="form-control" placeholder="Masukan email" required/>
         </div>
-                </p>
         <div class="form-group">
             <label>Password:</label>
             <input type="password" name="password" class="form-control" placeholder="Masukan password" required/>
