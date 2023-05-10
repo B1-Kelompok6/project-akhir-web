@@ -1,8 +1,6 @@
 <?php
-// Menghubungkan ke database
 include 'koneksi.php';
 
-// Mengambil id tiket dari URL
 $id_tiket = $_GET['id'];
 
 // Mengambil data tiket yang dipilih
@@ -31,24 +29,46 @@ mysqli_close($conn);
             <div class="fname">Cinema</div>
             <div class="lname">KW</div>
         </div>
-        <?php 
-        if ($data['status_film'] == 'playing') {?>
-            <ul class="nav">
-                <li><a href="index.php" class="active">Now Playing</a></li>
-                <li><a href="upcoming_page.php">Up Coming</a></li>
-                <li><a href="about_us.php">About Us</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
         <?php
-        }else{ ?>
-            <ul class="nav">
-                <li><a href="index.php" >Now Playing</a></li>
-                <li><a href="upcoming_page.php" class="active">Up Coming</a></li>
-                <li><a href="about_us.php">About Us</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
+        if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
+            if ($data['status_film'] == 'playing') {?>
+                <ul class="nav">
+                    <li><a href="index.php" class="active">Now Playing</a></li>
+                    <li><a href="upcoming_page.php">Up Coming</a></li>
+                    <li><a href="about_us.php">About Us</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
+            <?php
+            }else{ ?>
+                <ul class="nav">
+                    <li><a href="index.php" >Now Playing</a></li>
+                    <li><a href="upcoming_page.php" class="active">Up Coming</a></li>
+                    <li><a href="about_us.php">About Us</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
         <?php 
-        }?>
+            }
+        }else{
+            if ($data['status_film'] == 'playing') {?>
+                <ul class="nav">
+                    <li><a href="user_page.php" class="active">Now Playing</a></li>
+                    <li><a href="user_page2.php">Up Coming</a></li>
+                    <li><a href="user_page3.php">About Us</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                </ul>
+            <?php
+            }else{ ?>
+                <ul class="nav">
+                    <li><a href="user_page.php">Now Playing</a></li>
+                    <li><a href="user_page2.php" class="active">Up Coming</a></li>
+                    <li><a href="user_page3.php">About Us</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                </ul>
+        <?php 
+            }
+        }
+        ?>
+
         </nav>
         <div class="tiket-detail">
         <img src="data:image/jpeg;base64,<?php echo $gambar; ?>" alt="Poster Film">

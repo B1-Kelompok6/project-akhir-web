@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
+  header("Location: login2.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,23 +14,7 @@
     <link rel="stylesheet" href="style/seat.css" />
     <title>Movie Seat Booking</title>
   </head>
-  <body>
-  <div class="container2">
-			<nav class="wrapper">
-				<div class="prof">
-					<div class="fname">Cinema</div>
-					<div class="lname">KW</div>
-				</div>
-				<ul class="nav">
-					<li><p></p></li>
-					<li><a href="index.php" class="active">Now Playing</a></li>
-					<li><a href="upcoming_page.php">Up Coming</a></li>
-					<li><a href="about_us.php">About Us</a></li>
-					<li><a href="login.php">Login</a></li>
-				</ul>
-			</nav>
-	</div>
-  
+  <body>  
     <div class="movie-container">
       <label> Pilih bioskop:</label>
       <select id="movie">
@@ -35,7 +26,6 @@
         <option value="6">Movimax Kaza City</option>
       </select>
     </div>
-</div>
     <ul class="showcase">
       <li>
         <div class="seat"></div>
@@ -120,6 +110,7 @@
       Anda telah memilih <span id="count">0</span> kursi 
     </p>
     <a href="pesan.php" id="pesan" >Oke</a>
+    <a href="logout.php" id="pesan" >Kembali</a>
     <script src="js/seat.js"></script>
   </body>
 </html>

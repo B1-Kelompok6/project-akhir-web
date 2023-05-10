@@ -2,7 +2,7 @@
 include "koneksi.php";
 
 if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
-  header("Location: login.php");
+  header("Location: login2.php");
   exit();
 }
 ?>

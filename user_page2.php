@@ -44,7 +44,7 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
         </nav>
 
         <?php
-        $query = mysqli_query($conn, "SELECT * FROM tiket WHERE status_film = 'playing'");
+        $query = mysqli_query($conn, "SELECT * FROM tiket WHERE status_film = 'soon'");
 
         // Cek apakah ada data
         if (mysqli_num_rows($query) > 0) {
@@ -56,7 +56,7 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
                 ?>
                 <div class="tiket-item">
                     <?php $gambar = base64_encode($data['poster']);?>
-                    <a href="detail_tiket.php">
+                    <a href="detail_page.php?id=<?php echo $data['id_tiket'];?>">
                         <img src="data:image/jpeg;base64,<?php echo $gambar; ?>" alt="Poster Film">
                     </a>
                     <div class="tiket-info">
