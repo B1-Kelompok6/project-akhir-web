@@ -16,7 +16,7 @@ if (isset($_GET['search'])) {
 // cek apakah parameter sort di-set
 if (isset($_GET['sort'])) {
   // jika parameter sort di-set, ambil nilai sort dan pastikan hanya memilih kolom yang valid
-  $valid_columns = array('judul_film');
+  $valid_columns = array('judul_film', 'status_film', 'studio');
   $sort = mysqli_real_escape_string($conn, $_GET['sort']);
   if (in_array($sort, $valid_columns)) {
     // buat query SQL dengan perintah ORDER BY sesuai dengan nilai sort
@@ -69,19 +69,23 @@ if (!$result) {
             <button type="submit" class="search-button">Search</button>
           </div>
         </form>
+        <div class ="tes">
+          <a href="crud_tiket/create.php" class="btn-primary">Add Data</a>
+          <a href="crud_tiket.php" class=btn-secondary>Refresh</a>
+        </div>
         <table>
             <thead>
             <tr class="table-judul">           
               <th>No</th>
               <th>Poster</th>
               <th class="jd"><a style="color:orange" href="?sort=judul_film">Judul Film</a></th>
-              <th class="rl">Status</th>
+              <th class="rl"><a style="color:orange" href="?sort=status_film">Status</a></th>
               <th class="jt">Jadwal Tayang</th>
               <th class="wt">Waktu</th>
               <th class="ht">Harga Tiket</th>
               <th class="dr">Durasi</th>
               <th>Rating</th>
-              <th>Studio</th>
+              <th><a style="color:orange" href="?sort=studio">Studio</a></th>
               <th>Set</th>
             </tr>
             </thead>
@@ -111,10 +115,6 @@ if (!$result) {
             ?>
         </table>
         <br>
-        <div class ="tes">
-        <a href="crud_tiket/create.php" class="btn-primary">Add Data</a>
-        <a href="crud_tiket.php" class=btn-secondary>Refresh</a>
-        </div>
     </div>
   </div>
 </body>
