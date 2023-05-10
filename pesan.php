@@ -35,7 +35,7 @@
 				<p>example@gmail.com</p>
 
 				<label for="tiket"><b>Jumlah Tiket</b></label>
-				<p>2</p>
+				<p id="ticket-count">0</p>
 
                 <label for="harga"><b>Total Harga</b></label>
 				<p>40000</p>
