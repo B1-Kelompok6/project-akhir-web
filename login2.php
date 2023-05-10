@@ -5,36 +5,28 @@ session_unset();
 
 $error = '';
 if (isset($_POST['login'])) {
-    // Ambil data dari form login
     $email = $_POST['email'];
     $password = $_POST['password'];
     $role = $_POST['role'];
 
-    // Query untuk memeriksa user di database
     $query = "SELECT * FROM user WHERE email='$email' AND password='$password' AND role='$role'";
 
-    // Eksekusi query
     $result = mysqli_query($conn, $query);
 
-    // Jika data ditemukan
     if (mysqli_num_rows($result) == 1) {
-        // Ambil data user
         $user = mysqli_fetch_assoc($result);
 
-        // Simpan data user ke session
         $_SESSION['id'] = $user['id'];
         $_SESSION['name'] = $user['username'];
         $_SESSION['pass'] = $user['password'];
         $_SESSION['email'] = $user['email'];
         $_SESSION['role'] = $user['role'];
 
-        // Redirect ke halaman dashboard sesuai dengan role user
         if ($user['role'] == 'pembeli') {
             header('Location: seat.php');
         } 
         exit();
     } else {
-        // Jika data tidak ditemukan, tampilkan pesan error
         $error = "Email, password, atau role anda salah.";
     }
 }
