@@ -8,7 +8,7 @@
     <title>Movie Seat Booking</title>
   </head>
   <body>
-  <div class="container">
+  <div class="container2">
 			<nav class="wrapper">
 				<div class="prof">
 					<div class="fname">Cinema</div>
@@ -24,7 +24,7 @@
 			</nav>
 	</div>
   
-    <div class="movie-container2">
+    <div class="movie-container">
       <label> Pilih bioskop:</label>
       <select id="movie">
         <option value="1">CGV Plaza Mulia</option>
@@ -50,7 +50,7 @@
         <small>Sold</small>
       </li>
     </ul>
-    <div class="container2">
+    <div class="container">
       <div class="screen"></div>
 
       <div class="row">
