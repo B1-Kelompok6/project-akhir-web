@@ -70,6 +70,10 @@ if (!$result) {
             <button type="submit" class="search-button">Search</button>
           </div>
         </form>
+        <div class ="tes">
+        <a href="crud_user/create.php" class="btn-primary">Add Data</a>
+        <a href="crud_user.php" class=btn-secondary>Refresh</a>
+        </div>
         <table class="tabel">
             <thead>
             <tr class="table-judul">           
@@ -102,10 +106,6 @@ if (!$result) {
             ?>
         </table>
         <br>
-        <div class ="tes">
-        <a href="crud_user/create.php" class="btn-primary">Add Data</a>
-        <a href="crud_user.php" class=btn-secondary>Refresh</a>
-        </div>
     </div>
   </div>
 </body>

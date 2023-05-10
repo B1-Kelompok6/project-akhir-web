@@ -56,7 +56,7 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
                 ?>
                 <div class="tiket-item">
                     <?php $gambar = base64_encode($data['poster']);?>
-                    <a href="detail_tiket.php">
+                    <a href="detail_page.php?id=<?php echo $data['id_tiket'];?>">
                         <img src="data:image/jpeg;base64,<?php echo $gambar; ?>" alt="Poster Film">
                     </a>
                     <div class="tiket-info">

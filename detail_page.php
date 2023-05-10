@@ -70,7 +70,7 @@ mysqli_close($conn);
                     <div class="detail-btn-container">
                         <button class="detail-btn review-btn" id="btn-review">Review</button>
                         <button class="detail-btn trailer-btn">Trailer</button>
-                        <button class="detail-btn buy-btn">Buy Ticket</button>
+                        <a href="seat.php"><button class="detail-btn buy-btn">Buy Ticket</button></a>
                     </div>
                     <?php
                 }else{ ?>
@@ -80,7 +80,7 @@ mysqli_close($conn);
                     <p><b>Harga tiket:</b> Rp -,</p>
                     <p><b>Durasi:</b> <?php echo $data['durasi']; ?> Menit</p>
                     <div class="detail-btn-container">
-                        <button class="detail-btn buy-btn2" disabled>Review</button>
+                        <button class="detail-btn buy-btn2">Review</button>
                         <button class="detail-btn trailer-btn">Trailer</button>
                         <button class="detail-btn buy-btn2">Buy Ticket</button>
                     </div>
@@ -89,6 +89,22 @@ mysqli_close($conn);
                 ?>
             </div>
         </div>
+        <div class="popup">
+            <div class="content">
+                <span class="close">&times;</span>
+                <h2><center>Review From Us<center></h2>
+                <form>
+                    <p><b>SCORE:</b></p>
+                    <p>10/10 </p>
+                    <br>
+                    <p><b>KOMENTAR:</b></p>
+                    <p>Film yang sangat epik!!</p>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
     </div>
 </body>
 </html>
