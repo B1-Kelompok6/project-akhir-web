@@ -23,12 +23,8 @@ if (isset($_POST['login'])) {
         $_SESSION['role'] = $user['role'];
 
         if ($user['role'] == 'pembeli') {
-            header('Location: user_page.php');
-        } else if ($user['role'] == 'staff') {
-            header('Location: crud_tiket.php');
-        } else if ($user['role'] == 'admin') {
-            header('Location: crud_tiket.php');
-        }
+            header('Location: seat.php');
+        } 
         exit();
     } else {
         $error = "Email, password, atau role anda salah.";

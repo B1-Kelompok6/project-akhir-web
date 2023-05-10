@@ -13,13 +13,10 @@ if (isset($_GET['search'])) {
   $query .= " WHERE username LIKE '%$search%' OR email LIKE '%$search%'";
 }
 
-// cek apakah parameter sort di-set
 if (isset($_GET['sort'])) {
-  // jika parameter sort di-set, ambil nilai sort dan pastikan hanya memilih kolom yang valid
   $valid_columns = array('username', 'email', 'role');
   $sort = mysqli_real_escape_string($conn, $_GET['sort']);
   if (in_array($sort, $valid_columns)) {
-    // buat query SQL dengan perintah ORDER BY sesuai dengan nilai sort
     $query .= " ORDER BY $sort";
   }
 }
