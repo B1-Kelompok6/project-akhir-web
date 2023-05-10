@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Invoice Pembelian Tiket Bioskop Online</title>
-    <link rel="stylesheet" type="text/css" href="inv.css">
+    <link rel="stylesheet" type="text/css" href="style/inv.css">
 	<style type="text/css">
 		
 	</style>
