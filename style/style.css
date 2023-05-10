@@ -223,3 +223,124 @@ h1 {
     color: #fff;
     font-weight: 300;
 }
+
+
+.tiket-detail {
+    padding: 5px;
+    /* border:5px solid red; */
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    margin-top: 50px;
+}
+
+.tiket-detail img {
+    max-width: 400px;
+    margin-right: 50px;
+}
+
+/* Styling untuk informasi detail */
+.tiket-detail-info {
+    width: 50%;
+}
+
+/* Styling untuk judul film */
+.tiket-detail-info h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Styling untuk informasi tambahan */
+.tiket-detail-a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tiket-detail-a p {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+/* Styling untuk deskripsi film */
+.tiket-detail-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    /* border: 2px solid red; */
+}
+
+/* Styling untuk link beli tiket */
+.tiket-detail-btn {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.detail-btn {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f47920;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-btn {
+    color: orange;
+    background-color: rgb(21, 21, 46);
+}
+
+.buy-btn {
+    color: orange;
+    background-color: rgb(21, 21, 46);
+}
+
+.buy-btn2{
+    background-color: rgb(21, 21, 46);
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5; 
+}
+
+.trailer-btn {
+    color: orange;
+    background-color: rgb(21, 21, 46);
+}
+
+.detail-btn-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-rev{
+    /* border: 2px solid red; */
+    /* text-align: left !important; */
+    margin-bottom: 5px !important;
+}
+
+.re{
+    text-align: center;
+    color: #f44336;
+}
+
+.containerr{
+    /* border: 2px solid red; */
+    background-color: white;
+}
+
+.body-detail{
+    background-color: white;
+}
