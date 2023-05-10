@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Pop-Up Pemesanan Tiket Bioskop</title>
-	<link rel="stylesheet" type="text/css" href="pesan.css">
+	<link rel="stylesheet" type="text/css" href="style/pesan.css">
 </head>
 <body>
 	<div class="container">
