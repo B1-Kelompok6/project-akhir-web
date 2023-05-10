@@ -60,5 +60,4 @@ include 'koneksi.php';
         mysqli_close($conn);
         ?>
     </div>
-</body>
-</html>
+    <?php include 'footer.php'; ?>  

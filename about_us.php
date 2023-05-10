@@ -40,5 +40,5 @@
     </section>
 
     <script src="js/script.js"></script>
-</body>
-</html>
+
+    <?php include 'footer.php'; ?>  
