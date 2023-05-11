@@ -1,6 +1,8 @@
 <?php
 include '../koneksi.php';
 
+$error = "";
+
 if(isset($_POST['update'])){
     $id_tiket = $_POST['id_tiket'];
     $judul = $_POST['judul_film'];
@@ -12,6 +14,7 @@ if(isset($_POST['update'])){
     $durasi = $_POST['durasi'];
     $rating = $_POST['rating'];
     $studio = $_POST['studio'];
+    $trailer = $_POST['trailer'];
 
     // periksa apakah tag input poster diisi atau tidak
     if(!empty($_FILES['poster']['tmp_name'])){
@@ -21,17 +24,21 @@ if(isset($_POST['update'])){
 
         $query = "UPDATE tiket SET judul_film='$judul', status_film='$status', jadwal_tayang='$jadwal', 
                 waktu='$waktu', harga_tiket='$harga', poster='$isi_poster', sinopsis='$sinopsis', 
-                durasi='$durasi', rating='$rating', studio='$studio' WHERE id_tiket='$id_tiket'";
+                durasi='$durasi', rating='$rating', studio='$studio', trailer='$trailer' WHERE id_tiket='$id_tiket'";
     }else{
         $query = "UPDATE tiket SET judul_film='$judul', status_film='$status', jadwal_tayang='$jadwal', 
         waktu='$waktu', harga_tiket='$harga', sinopsis='$sinopsis', durasi='$durasi', rating='$rating', 
-        studio='$studio' WHERE id_tiket='$id_tiket'";
+        studio='$studio', trailer='$trailer' WHERE id_tiket='$id_tiket'";
     }
-    mysqli_query($conn, $query);
+    
+    if(mysqli_query($conn, $query)){
     echo "<script>
             alert('Berhasil mengubah data tiket');
             document.location.href = '../crud_tiket.php';
           </script>";
+    }else{
+        $error = "Gagal mengubah data tiket: " . mysqli_error($error);
+    }
 }
 
 $id_tiket = $_GET['id'];
@@ -92,7 +99,11 @@ $row = mysqli_fetch_assoc($result);
             <div class="form-group">
                 <label>Studio:</label>
                 <input type="text" name="studio" class="form-control" placeholder="Masukkan studio" value="<?php echo $row['studio'] ?>" required>
-            </div><br>
+            </div>
+            <div class="form-group">
+                <label>Trailer:</label>
+                <input type="text" name="trailer" class="form-control" placeholder="Masukkan link youtube trailer" value="<?php echo $row['trailer'] ?>" required>
+            </div>
             <button type="submit" name="update" class="btn btn-primary">Update</button>
             <a href="../crud_tiket.php" class="btn btn-secondary">Batal</a><br><br>
         </form>

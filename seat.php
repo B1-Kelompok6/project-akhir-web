@@ -110,7 +110,7 @@ if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
       Anda telah memilih <span id="count">0</span> kursi 
     </p>
     <a href="pesan.php" id="pesan" >Oke</a>
-    <a href="logout.php" id="pesan" >Kembali</a>
+    <a href="user_page.php" id="pesan" >Kembali</a>
     <script src="js/seat.js"></script>
   </body>
 </html>
