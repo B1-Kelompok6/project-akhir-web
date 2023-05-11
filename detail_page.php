@@ -7,6 +7,9 @@ $id_tiket = $_GET['id'];
 $query = mysqli_query($conn, "SELECT * FROM tiket WHERE id_tiket = $id_tiket");
 $data = mysqli_fetch_array($query);
 
+$query2 = "SELECT * FROM review WHERE id_tiket = $id_tiket";
+$hasil = mysqli_query($conn, $query2);
+
 // Mengubah data poster menjadi format gambar
 $gambar = base64_encode($data['poster']);
 
@@ -89,8 +92,14 @@ mysqli_close($conn);
                     <p><b>Durasi:</b> <?php echo $data['durasi']; ?> Menit</p>
                     <div class="detail-btn-container">
                         <button class="detail-btn review-btn" id="btn-review">Review</button>
-                        <button class="detail-btn trailer-btn">Trailer</button>
+                        <a href="<?php echo $data['trailer']; ?>" target="_blank"><button class="detail-btn trailer-btn">Trailer</button></a>
                         <a href="seat.php"><button class="detail-btn buy-btn">Buy Ticket</button></a>
+                    </div>
+                    <div id="lightbox" class="lightbox">
+                        <div class="lightbox-content">
+                            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+                            <iframe id="video-iframe" class="video-iframe" src="<?php echo $data['trailer']; ?>" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
                     <?php
                 }else{ ?>
@@ -101,12 +110,35 @@ mysqli_close($conn);
                     <p><b>Durasi:</b> <?php echo $data['durasi']; ?> Menit</p>
                     <div class="detail-btn-container">
                         <button class="detail-btn buy-btn2">Review</button>
-                        <button class="detail-btn trailer-btn">Trailer</button>
+                        <button class="detail-btn trailer-btn" data-src="<?php echo $data['trailer']; ?>" onclick="openLightbox()">Trailer</button>
                         <button class="detail-btn buy-btn2">Buy Ticket</button>
                     </div>
-                <?php 
-                }
-                ?>
+                    <div id="lightbox" class="lightbox">
+                        <div class="lightbox-content">
+                            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+                            <iframe id="video-iframe" class="video-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <?php 
+                    }
+                    ?>
+                    <script>
+                        function openLightbox() {
+                            var trailerBtn = document.querySelector('.trailer-btn');
+                            var videoSrc = trailerBtn.getAttribute('data-src');
+                            var videoIframe = document.getElementById('video-iframe');
+                            videoIframe.setAttribute('src', videoSrc);
+                            document.getElementById('lightbox').style.display = 'block';
+                        }
+
+                        function closeLightbox() {
+                            // Sembunyikan lightbox (overlay)
+                            document.getElementById('lightbox').style.display = 'none';
+                            // Hentikan pemutaran video pada iframe
+                            var videoIframe = document.getElementById('video-iframe');
+                            videoIframe.setAttribute('src', '');
+                        }
+                    </script>
             </div>
         </div>
         <div class="popup">
@@ -114,17 +146,19 @@ mysqli_close($conn);
                 <span class="close">&times;</span>
                 <h2><center>Review From Us<center></h2>
                 <form>
+                    <?php while ($data_hasil = mysqli_fetch_assoc($hasil)) { ?>
                     <p><b>SCORE:</b></p>
-                    <p>10/10 </p>
+                    <p><?php echo $data_hasil['penilaian'] ?>/100</p>
                     <br>
                     <p><b>KOMENTAR:</b></p>
-                    <p>Film yang sangat epik!!</p>
+                    <p><?php echo $data_hasil['komentar'] ?></p>
                     <br>
+                    <?php }?>
                 </form>
             </div>
         </div>
     </div>
     <script src="js/script.js"></script>
-    </div>
+
 </body>
 </html>

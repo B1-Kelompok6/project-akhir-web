@@ -26,3 +26,8 @@ btnClose.addEventListener("click", () => {
   // Sembunyikan pop up
   popup.style.display = "none";
 });
+
+function trailer() {
+    var popup_trailer = document.getElementById("trailer");
+    popup_trailer.classList.toggle("show");
+  }

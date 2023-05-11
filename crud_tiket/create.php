@@ -13,13 +13,14 @@ if (isset($_POST['add'])) {
     $durasi = $_POST['durasi'];
     $rating = $_POST['rating'];
     $studio = $_POST['studio'];
+    $trailer = $_POST['trailer'];
 
     // Membaca file gambar yang di-upload
     $poster = $_FILES['poster']['tmp_name'];
     $isi_poster = addslashes(file_get_contents($poster));
 
     // Query untuk menyimpan data ke dalam tabel tiket
-    $query = "INSERT INTO tiket VALUES ('','$judul', '$status', '$jadwal', '$waktu', '$harga', '$isi_poster', '$sinopsis', '$durasi', '$rating', '$studio')";
+    $query = "INSERT INTO tiket VALUES ('','$judul', '$status', '$jadwal', '$waktu', '$harga', '$isi_poster', '$sinopsis', '$durasi', '$rating', '$studio', '$trailer')";
 
     if(mysqli_query($conn, $query)) {
         echo "<script>
@@ -43,6 +44,10 @@ if (isset($_POST['add'])) {
     <div class="container">
         <br>
         <center><h2>Input Data Tiket</h2></center>
+        <br>
+        <?php if($error != ''){ ?>
+            <div style="color:red; text-align:right;" ><?php echo $error; ?></div>
+        <?php } ?>
         <form action="" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label>Judul Film:</label>
@@ -84,11 +89,14 @@ if (isset($_POST['add'])) {
             <label>Studio:</label>
             <input type="text" name="studio" class="form-control" placeholder="Masukkan studio" required>
         </div>
+        <div class="form-group">
+            <label>Trailer:</label>
+            <input type="text" name="trailer" class="form-control" placeholder="Masukkan link youtube trailer film" required>
+        </div>
         <button type="submit" name="add" class="btn btn-primary">Submit</button>
         <a href="../crud_tiket.php" class="btn btn-secondary">Batal</a>
-        <?php if($error != ''){ ?>
-            <div style="color:red; text-align:right;" ><?php echo $error; ?></div>
-        <?php } ?>
+        <br>
+        <br>
     </div>
 </body>
 </html>
