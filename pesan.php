@@ -1,30 +1,46 @@
 <?php 
 include "koneksi.php";
 
-$id_tiket = $_GET['id'];
-$id_user = $_GET['id_user'];
+$tanggal_pemesanan = date('Y-m-d');
 
+$id_user = $_GET['id_user'];
+$email_user = mysqli_query($conn, "SELECT email FROM user WHERE id_user = $id_user");
+
+$id_tiket = $_GET['id'];
 $query = mysqli_query($conn, "SELECT * FROM tiket WHERE id_tiket = $id_tiket");
 $data  = mysqli_fetch_array($query);
+$judul_film = $data['judul_film'];
+$tanggal_tayang = $data['jadwal_tayang'];
+$waktu = $data['waktu'];
 
 
-
-$theater = $_POST['theater'];
 $total= $_POST['total_harga'];
 $jumlah_tiket=$_POST['jumlah_tiket'];
-
-if(isset($_POST['submit'])){
-    $query_riwayat = "INSERT INTO riwayat_pemesanan VALUES ('','$id_user', '$id_tiket', '$theater')";
-    $result = mysqli_query($conn, $query_riwayat);
-    if($result){
-        //jika berhasil, redirect ke halaman riwayat pemesanan
-        header("Location: riwayat_pemesanan.php");
-    } else {
-        //jika gagal, tampilkan pesan error
-        echo "Gagal menambahkan riwayat pemesanan. Error: " . mysqli_error($conn);
-    }
+$nama_bioskop = $_POST['theater'];
+$query_bioskop = mysqli_query($conn, "SELECT id_bioskop FROM bioskop WHERE nama_bioskop = '$nama_bioskop'");
+if(mysqli_num_rows($query_bioskop) == 1) {
+  $hasil_bioskop = mysqli_fetch_array($query_bioskop);
+  $id_bioskop = $hasil_bioskop['id_bioskop'];
+}
+else {
+  echo "Gagal menambahkan riwayat pemesanan. Error: Bioskop tidak ditemukan.";
+  exit();
 }
 
+if(isset($_POST['submit'])){
+  $query_riwayat = "INSERT INTO riwayat_pemesanan 
+  VALUES ('','$tanggal_pemesanan', '" . mysqli_fetch_array($email_user)['email'] . "', 
+  '$judul_film', '$tanggal_tayang', '$waktu', '$nama_bioskop', '$jumlah_tiket', '$total', 
+  '$id_tiket', '$id_user', '$id_bioskop')";
+  $result = mysqli_query($conn, $query_riwayat);
+  if($result){
+    //jika berhasil, redirect ke halaman riwayat pemesanan
+    header("Location: invoice.php");
+  } else {
+    //jika gagal, tampilkan pesan error
+    echo "Gagal menambahkan riwayat pemesanan. Error: " . mysqli_error($conn);
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,16 +56,16 @@ if(isset($_POST['submit'])){
 				<h1>Konfirmasi Pemesanan</h1>
 
 				<label for=""><b>Film</b></label>
-                <p><?php echo $data['judul_film']?></p>
+                <p><?php echo $judul_film?></p>
 
 				<label for=""><b>Tanggal</b></label>
-				<p><?php echo $data['jadwal_tayang'] ?></p>
+				<p><?php echo $tanggal_tayang ?></p>
 
 				<label for=""><b>Waktu</b></label>
-				<p><?php echo $data['waktu']?></p>
+				<p><?php echo $waktu?></p>
 
 				<label for="">Bioskop</label>
-				<p><?php echo $theater?></p>
+				<p><?php echo $nama_bioskop?></p>
 
 				<label for=""><b>Jumlah Tiket</b></label>
 				<p><?php echo $jumlah_tiket?></p>
