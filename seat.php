@@ -1,7 +1,17 @@
 <?php 
-session_start();
+include "koneksi.php";
+$id_tiket = $_GET['id'];
+$id_user = $_GET['id_user'];
+
+$query = "SELECT * FROM bioskop";
+$data = mysqli_query($conn, $query);
+
+$query_harga = mysqli_query($conn, "SELECT * FROM tiket WHERE id_tiket = $id_tiket");
+$data_harga = mysqli_fetch_array($query_harga);
+
+
 if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
-  header("Location: login2.php");
+  header("Location: login.php");
 }
 ?>
 
@@ -16,14 +26,12 @@ if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
   </head>
   <body>  
     <div class="movie-container">
+      <form method="POST" action="pesan.php?id=<?php echo $id_tiket . '&id_user=' . $id_user; ?>"
       <label> Pilih bioskop:</label>
-      <select id="movie">
-        <option value="1">CGV Plaza Mulia</option>
-        <option value="2">Pentacity XXI</option>
-        <option value="3">Cinépolis Living Plaza</option>
-        <option value="4">SCP 21</option>
-        <option value="5">Platinum Cineplex</option>
-        <option value="6">Movimax Kaza City</option>
+      <select name="theater" id="movie">;
+        <?php while($row = mysqli_fetch_assoc($data)) {
+          echo '<option value="' . $row['nama_bioskop'] . '">' . $row['nama_bioskop'] . '</option>';
+        } ?>
       </select>
     </div>
     <ul class="showcase">
@@ -106,12 +114,63 @@ if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
       </div>
     </div>
     
-    <p class="text">
-      Anda telah memilih <span id="count">0</span> kursi 
-    </p>
-    <a href="pesan.php" id="pesan" >Oke</a>
-    <a href="user_page.php" id="pesan" >Kembali</a>
-    <script src="js/seat.js"></script>
+    <br>
+    <p class="text">Anda telah memilih <span id="count">0</span> kursi.</p>
+      <input type="hidden" name="jumlah_tiket" id="jumlah-tiket" value="1">
+    <p>Harga per tiket: Rp <span id="harga-tiket"><?= $data_harga['harga_tiket'] ?></span></p>
+      <input type="hidden" name="harga_tiket" id="input-harga-tiket" value="<?= $data_harga['harga_tiket'] ?>">
+    <p>Total harga: Rp <span id="total-harga"></span></p>
+      <input type="hidden" name="total_harga" id="input-total-harga">
+    
+      <button type="submit" id="pesan">Lanjutkan</button>
+    <a href="user_page.php">Kembali</a>
+    </form>
+    
+    <script>
+      const seats = document.querySelectorAll(".row .seat:not(.sold)");
+      const count = document.getElementById("count");
+      const jumlahTiketInput = document.getElementById("jumlah-tiket");
+      const hargaTiket = document.getElementById("harga-tiket");
+      const inputHargaTiket = document.getElementById("input-harga-tiket");
+      const totalHarga = document.getElementById("total-harga");
+      const inputTotalHarga = document.getElementById("input-total-harga");
+
+      let jumlahTiket = +jumlahTiketInput.value;
+
+      function updateSelectedCount() {
+        const selectedSeats = document.querySelectorAll(".row .seat.selected");
+        const selectedSeatsCount = selectedSeats.length;
+
+        count.innerText = selectedSeatsCount;
+
+        const currentHargaTiket = parseFloat(hargaTiket.innerText.replace("Rp. ", ""));
+        const currentTotalHarga = selectedSeatsCount * currentHargaTiket;
+
+        totalHarga.innerText = currentTotalHarga.toLocaleString("id-ID");
+        inputHargaTiket.value = currentHargaTiket;
+        inputTotalHarga.value = currentTotalHarga;
+
+        jumlahTiket = selectedSeatsCount;
+        jumlahTiketInput.value = jumlahTiket;
+      }
+
+      seats.forEach((seat) => {
+        seat.addEventListener("click", (e) => {
+          if (seat.classList.contains("selected")) {
+            seat.classList.remove("selected");
+          } else {
+            seat.classList.add("selected");
+          }
+
+          updateSelectedCount();
+        });
+      });
+
+      jumlahTiketInput.addEventListener("input", (e) => {
+        jumlahTiket = +e.target.value;
+        updateSelectedCount();
+      });
+    </script>
   </body>
 </html>
 
