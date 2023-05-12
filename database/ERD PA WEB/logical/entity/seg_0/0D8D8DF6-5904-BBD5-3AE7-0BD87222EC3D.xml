@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0D8D8DF6-5904-BBD5-3AE7-0BD87222EC3D" name="review">
+<createdBy>Namira</createdBy>
+<createdTime>2023-04-29 14:06:02 UTC</createdTime>
+<ownerDesignName>ERD PA WEB</ownerDesignName>
+<engineerTo>
+<item key="B3F5CA95-EDB4-2A35-D74B-DE2A981A3431" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_rate" id="CB97543B-7F9E-225D-9AB9-166707970B4A">
+<createdBy>Namira</createdBy>
+<createdTime>2023-04-29 14:06:56 UTC</createdTime>
+<ownerDesignName>ERD PA WEB</ownerDesignName>
+<engineerTo>
+<item key="B3F5CA95-EDB4-2A35-D74B-DE2A981A3431" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="penilaian" id="C1CA83D3-EFC3-BDBB-5280-49F661A33596">
+<createdBy>Namira</createdBy>
+<createdTime>2023-04-29 14:07:03 UTC</createdTime>
+<ownerDesignName>ERD PA WEB</ownerDesignName>
+<engineerTo>
+<item key="B3F5CA95-EDB4-2A35-D74B-DE2A981A3431" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="komentar" id="CBC4979F-5DE3-AED1-F2FE-BA9A7D527B4E">
+<createdBy>Namira</createdBy>
+<createdTime>2023-04-29 14:07:19 UTC</createdTime>
+<ownerDesignName>ERD PA WEB</ownerDesignName>
+<engineerTo>
+<item key="B3F5CA95-EDB4-2A35-D74B-DE2A981A3431" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_tiket" id="D1609486-9C50-93BC-3907-7E3AF83F538D">
+<createdBy>Namira</createdBy>
+<createdTime>2023-04-29 14:07:55 UTC</createdTime>
+<generatorID>660374B2-9854-C764-3D6F-DA0DEB037719</generatorID>
+<ownerDesignName>ERD PA WEB</ownerDesignName>
+<engineerTo>
+<item key="B3F5CA95-EDB4-2A35-D74B-DE2A981A3431" value="true"/>
+</engineerTo>
+<referedAttribute>36D64FFE-89D9-C4CF-3355-4E2D8DBB59BE</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="67A53029-7C4C-D817-73D5-A08029297B95" name="review PK">
+<createdBy>Namira</createdBy>
+<createdTime>2023-04-29 14:07:00 UTC</createdTime>
+<ownerDesignName>ERD PA WEB</ownerDesignName>
+<engineerTo>
+<item key="B3F5CA95-EDB4-2A35-D74B-DE2A981A3431" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CB97543B-7F9E-225D-9AB9-166707970B4A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
