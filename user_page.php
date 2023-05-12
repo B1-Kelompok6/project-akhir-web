@@ -5,6 +5,15 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
   header("Location: login2.php");
   exit();
 }
+
+$email = $_SESSION['email'];
+
+$query2 = mysqli_query($conn, "SELECT id_user FROM user WHERE email = '$email'");
+if (mysqli_num_rows($query2) > 0) {
+    $data2 = mysqli_fetch_array($query2);
+    $id_user = $data2['id_user'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +33,6 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
             </div>
             <div class="welcome">
                 <?php
-                $email = $_SESSION['email'];
                 $query = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
                 if (mysqli_num_rows($query) > 0) {
                     while ($data = mysqli_fetch_array($query)) {
@@ -54,7 +62,7 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
                 ?>
                 <div class="tiket-item">
                     <?php $gambar = base64_encode($data['poster']);?>
-                    <a href="detail_page.php?id=<?php echo $data['id_tiket'];?>">
+                    <a href="detail_page.php?id=<?php echo $data['id_tiket'] . '&id_user=' . $id_user; ?>">
                         <img src="data:image/jpeg;base64,<?php echo $gambar; ?>" alt="Poster Film">
                     </a>
                     <div class="tiket-info">

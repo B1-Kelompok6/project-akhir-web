@@ -3,6 +3,7 @@ include 'koneksi.php';
 
 $id_tiket = $_GET['id'];
 
+
 // Mengambil data tiket yang dipilih
 $query = mysqli_query($conn, "SELECT * FROM tiket WHERE id_tiket = $id_tiket");
 $data = mysqli_fetch_array($query);
@@ -52,7 +53,8 @@ mysqli_close($conn);
         <?php 
             }
         }else{
-            if ($data['status_film'] == 'playing') {?>
+            if ($data['status_film'] == 'playing') { ?>
+            
                 <ul class="nav">
                     <li><a href="user_page.php" class="active">Now Playing</a></li>
                     <li><a href="user_page2.php">Up Coming</a></li>
@@ -84,6 +86,7 @@ mysqli_close($conn);
                 </div>
 
                 <?php 
+                $id_user = $_GET['id_user'];
                 if ($data['status_film'] == 'playing') {?>
                     <p><b>Sinopsis:</b> <?php echo $data['sinopsis']; ?></p><br>
                     <p><b>Tanggal tayang:</b> <?php echo $data['jadwal_tayang']; ?></p>
@@ -93,7 +96,7 @@ mysqli_close($conn);
                     <div class="detail-btn-container">
                         <button class="detail-btn review-btn" id="btn-review">Review</button>
                         <a href="<?php echo $data['trailer']; ?>" target="_blank"><button class="detail-btn trailer-btn">Trailer</button></a>
-                        <a href="seat.php"><button class="detail-btn buy-btn">Buy Ticket</button></a>
+                        <a href="seat.php?id=<?php echo $data['id_tiket'] . '&id_user=' . $id_user; ?>"><button class="detail-btn buy-btn">Buy Ticket</button></a>
                     </div>
                     <div id="lightbox" class="lightbox">
                         <div class="lightbox-content">
@@ -122,23 +125,6 @@ mysqli_close($conn);
                     <?php 
                     }
                     ?>
-                    <script>
-                        function openLightbox() {
-                            var trailerBtn = document.querySelector('.trailer-btn');
-                            var videoSrc = trailerBtn.getAttribute('data-src');
-                            var videoIframe = document.getElementById('video-iframe');
-                            videoIframe.setAttribute('src', videoSrc);
-                            document.getElementById('lightbox').style.display = 'block';
-                        }
-
-                        function closeLightbox() {
-                            // Sembunyikan lightbox (overlay)
-                            document.getElementById('lightbox').style.display = 'none';
-                            // Hentikan pemutaran video pada iframe
-                            var videoIframe = document.getElementById('video-iframe');
-                            videoIframe.setAttribute('src', '');
-                        }
-                    </script>
             </div>
         </div>
         <div class="popup">

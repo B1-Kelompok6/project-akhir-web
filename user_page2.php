@@ -5,6 +5,9 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
   header("Location: login.php");
   exit();
 }
+
+$email = $_SESSION['email'];
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +27,6 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
             </div>
             <div class="welcome">
                 <?php
-                $email = $_SESSION['email'];
                 $query = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
                 if (mysqli_num_rows($query) > 0) {
                     // Looping data dari tabel user

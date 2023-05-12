@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Bulan Mei 2023 pada 14.15
+-- Waktu pembuatan: 12 Bulan Mei 2023 pada 09.06
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.27
 
@@ -75,12 +75,15 @@ INSERT INTO `review` (`id_rate`, `penilaian`, `komentar`, `id_tiket`) VALUES
 
 CREATE TABLE `riwayat_pemesanan` (
   `id_pemesanan` int(11) NOT NULL,
-  `tgl_pemesanan` datetime NOT NULL,
-  `email_pemesan` varchar(30) NOT NULL,
+  `tgl_pemesanan` date NOT NULL,
+  `email_pemesan` varchar(30) DEFAULT NULL,
   `film` varchar(30) NOT NULL,
   `bioskop` varchar(30) NOT NULL,
+  `jumlah_tiket` int(11) NOT NULL,
+  `total_harga` int(11) NOT NULL,
   `id_tiket` int(11) DEFAULT NULL,
-  `id_user` int(11) DEFAULT NULL
+  `id_user` int(11) NOT NULL,
+  `id_bioskop` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -155,6 +158,13 @@ INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `role`) VALUES
 --
 
 --
+-- Indeks untuk tabel `bioskop`
+--
+ALTER TABLE `bioskop`
+  ADD PRIMARY KEY (`id_bioskop`),
+  ADD UNIQUE KEY `nama_bioskop` (`nama_bioskop`);
+
+--
 -- Indeks untuk tabel `review`
 --
 ALTER TABLE `review`
@@ -167,7 +177,8 @@ ALTER TABLE `review`
 ALTER TABLE `riwayat_pemesanan`
   ADD PRIMARY KEY (`id_pemesanan`),
   ADD KEY `id_tiket` (`id_tiket`),
-  ADD KEY `id_user` (`id_user`);
+  ADD KEY `id_bioskop` (`id_bioskop`),
+  ADD KEY `riwayat_pemesanan_ibfk_2` (`id_user`);
 
 --
 -- Indeks untuk tabel `tiket`
@@ -227,7 +238,8 @@ ALTER TABLE `review`
 --
 ALTER TABLE `riwayat_pemesanan`
   ADD CONSTRAINT `riwayat_pemesanan_ibfk_1` FOREIGN KEY (`id_tiket`) REFERENCES `tiket` (`id_tiket`),
-  ADD CONSTRAINT `riwayat_pemesanan_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
+  ADD CONSTRAINT `riwayat_pemesanan_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
+  ADD CONSTRAINT `riwayat_pemesanan_ibfk_3` FOREIGN KEY (`id_bioskop`) REFERENCES `bioskop` (`id_bioskop`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
