@@ -148,7 +148,7 @@ body {
 }
 
 .seat.selected {
-  background-color: green;
+  background-color: yellow;
 }
 
 .seat.sold {
@@ -215,14 +215,22 @@ p.text span{
     color: rgb(158, 248, 158);
 }
 
-#pesan {
+.tombol {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#pesan{
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
-  width: 150px;
+  width: 100px;
   padding: 5px;
-  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   /* margin-bottom: 50px; */
-  background-color: orange;
+  background-color: green;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -230,8 +238,28 @@ p.text span{
   font-size: 16px;
 }
 
-
-#pesan:hover {
+#pesan:hover{
   color: black;
-  background-color:gray
+  background-color:gray;
+}
+
+#back {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  padding: 5px;
+  margin-right: 10px;
+  /* margin-bottom: 50px; */
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#back:hover {
+  color: black;
+  background-color:gray;
 }

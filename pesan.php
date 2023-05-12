@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
                 <label for="harga"><b>Total Harga</b></label>
 				<p><?php echo "Rp " . number_format($total, 0, ',', '.')?></p>
 
-                <button type="submit" name="submit">Bayar</button>
+                <button type="submit" name="submit" id="submit">Bayar</button>
 			</form>
 			</div>
 		</div>
