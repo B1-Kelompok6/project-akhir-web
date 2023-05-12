@@ -98,12 +98,6 @@ mysqli_close($conn);
                         <a href="<?php echo $data['trailer']; ?>" target="_blank"><button class="detail-btn trailer-btn">Trailer</button></a>
                         <a href="seat.php?id=<?php echo $data['id_tiket'] . '&id_user=' . $id_user; ?>"><button class="detail-btn buy-btn">Buy Ticket</button></a>
                     </div>
-                    <div id="lightbox" class="lightbox">
-                        <div class="lightbox-content">
-                            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-                            <iframe id="video-iframe" class="video-iframe" src="<?php echo $data['trailer']; ?>" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
                     <?php
                 }else{ ?>
                     <p><b>Sinopsis:</b> <?php echo $data['sinopsis']; ?></p><br>
@@ -113,7 +107,7 @@ mysqli_close($conn);
                     <p><b>Durasi:</b> <?php echo $data['durasi']; ?> Menit</p>
                     <div class="detail-btn-container">
                         <button class="detail-btn buy-btn2">Review</button>
-                        <button class="detail-btn trailer-btn" data-src="<?php echo $data['trailer']; ?>" onclick="openLightbox()">Trailer</button>
+                        <a href="<?php echo $data['trailer']; ?>" target="_blank"><button class="detail-btn trailer-btn">Trailer</button></a>
                         <button class="detail-btn buy-btn2">Buy Ticket</button>
                     </div>
                     <div id="lightbox" class="lightbox">
