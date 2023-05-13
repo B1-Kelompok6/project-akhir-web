@@ -44,11 +44,12 @@ th, td {
 }
 
 td{
+	padding-left: 20px !important;
 	width: 70%;
 }
 
 th {
-	background-color: #f0f0f0;
+	background-color: #dfdfdf;
 	font-weight: bold;
 }
 

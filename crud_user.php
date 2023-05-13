@@ -68,8 +68,8 @@ if (!$result) {
           </div>
         </form>
         <div class ="tes">
-        <a href="crud_user/create.php" class="btn-primary">Add Data</a>
-        <a href="crud_user.php" class=btn-secondary>Refresh</a>
+          <a href="crud_user/create.php" class="btn-primary">Add Data</a>
+          <a href="crud_user.php" class=btn-secondary>Refresh</a>
         </div>
         <table class="tabel">
             <thead>

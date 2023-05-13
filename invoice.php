@@ -9,7 +9,7 @@ $query_invoice = mysqli_query($conn, "SELECT * FROM riwayat_pemesanan WHERE id_u
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Invoice Pembelian Tiket Bioskop Online</title>
+	<title>Invoice</title>
     <link rel="stylesheet" type="text/css" href="style/inv.css">
 	<style type="text/css">
 		
@@ -17,7 +17,7 @@ $query_invoice = mysqli_query($conn, "SELECT * FROM riwayat_pemesanan WHERE id_u
 </head>
 <body>
 	<div class="container2">
-		<h1>Invoice Pembelian Tiket Bioskop Online</h1>
+		<h1>INVOICE</h1>
 		<?php 
 		if(mysqli_num_rows($query_invoice) > 0){
 			$data_invoice = mysqli_fetch_array($query_invoice);		  
@@ -55,7 +55,7 @@ $query_invoice = mysqli_query($conn, "SELECT * FROM riwayat_pemesanan WHERE id_u
 
 		<p class="total">Total Pembayaran: Rp <?php echo number_format($data_invoice['total_harga'], 0, ',', '.'); ?></p>
         <a href="user_page.php" id="back">Oke</a>
-		
+
 		<?php }else {
 		echo "Data riwayat pemesanan tidak tersedia";
 		}
