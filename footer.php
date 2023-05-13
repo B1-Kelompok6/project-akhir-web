@@ -15,16 +15,17 @@
 
 <style>
 footer {
+  /* margin-top:-40px; */
   background-color: orange;
   color: black;
-  padding: 20px;
+  padding: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: inherit;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 92.6%;
   box-shadow: 0 7px 10px 0 black;
 }
 
@@ -50,7 +51,6 @@ footer {
 
 .footer-links li {
   display: inline-block;
-  margin-right: 30px;
 }
 
 .footer-links a {

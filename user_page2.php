@@ -83,3 +83,6 @@ $email = $_SESSION['email'];
         mysqli_close($conn);
         ?>
     </div>
+    <?php include "footer.php"?>
+</body>
+</html>
