@@ -3,16 +3,13 @@ include "koneksi.php";
 
 $error = "";
 if (isset($_POST['register'])){
-    // Ambil data dari form
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $role = $_POST['role'];
 
-    // Query untuk menambahkan data ke database
     $query = "INSERT INTO user (username, email, password, role) VALUES ('$username', '$email', '$password', '$role')";
 
-    // Jalankan query
     if(mysqli_query($conn, $query)){
         echo"
         <script>

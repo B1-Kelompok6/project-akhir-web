@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pop-Up Pemesanan Tiket Bioskop</title>
+	<title>Konfirmasi Pemesanan</title>
 	<link rel="stylesheet" type="text/css" href="style/pesan.css">
 </head>
 <body>

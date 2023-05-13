@@ -1,3 +1,7 @@
+<?php 
+include "koneksi.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,18 +26,11 @@
         </nav>
 
         <?php
-            // Menghubungkan ke database
-            include 'koneksi.php';
-
-            // Mengambil data dari tabel tiket_nonton_bioskop
-            $query = mysqli_query($conn, "SELECT * FROM tiket WHERE status_film = 'soon'");
-
-        // Cek apakah ada data
+        $query = mysqli_query($conn, "SELECT * FROM tiket WHERE status_film = 'soon'");
         if (mysqli_num_rows($query) > 0) {
             ?>
             <div class="tiket-container">
             <?php
-            // Looping data dari tabel tiket_nonton_bioskop
             while ($data = mysqli_fetch_array($query)) {
                 ?>
                 <div class="tiket-item">

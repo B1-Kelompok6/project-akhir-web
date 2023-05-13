@@ -13,14 +13,6 @@ if (isset($_GET['search'])) {
   $query .= " WHERE email_pemesan LIKE '%$search%' OR id_pemesanan LIKE '%$search%'";
 }
 
-if (isset($_GET['sort'])) {
-  $valid_columns = array('tanggal_tayang');
-  $sort = mysqli_real_escape_string($conn, $_GET['sort']);
-  if (in_array($sort, $valid_columns)) {
-    $query .= " ORDER BY $sort";
-  }
-}
-
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -96,3 +88,5 @@ $result = mysqli_query($conn, $query);
           <br>
         </div>
     </div>
+</body>
+</html>

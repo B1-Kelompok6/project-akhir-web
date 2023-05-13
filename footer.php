@@ -15,7 +15,6 @@
 
 <style>
 footer {
-  /* margin-top:-40px; */
   background-color: orange;
   color: black;
   padding: 50px;
