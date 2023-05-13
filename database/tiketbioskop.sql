@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Bulan Mei 2023 pada 09.06
+-- Waktu pembuatan: 13 Bulan Mei 2023 pada 05.19
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.27
 
@@ -75,9 +75,11 @@ INSERT INTO `review` (`id_rate`, `penilaian`, `komentar`, `id_tiket`) VALUES
 
 CREATE TABLE `riwayat_pemesanan` (
   `id_pemesanan` int(11) NOT NULL,
-  `tgl_pemesanan` date NOT NULL,
+  `tgl_pemesanan` datetime NOT NULL,
   `email_pemesan` varchar(30) DEFAULT NULL,
   `film` varchar(30) NOT NULL,
+  `tanggal_tayang` date NOT NULL,
+  `waktu` time NOT NULL,
   `bioskop` varchar(30) NOT NULL,
   `jumlah_tiket` int(11) NOT NULL,
   `total_harga` int(11) NOT NULL,
@@ -85,6 +87,13 @@ CREATE TABLE `riwayat_pemesanan` (
   `id_user` int(11) NOT NULL,
   `id_bioskop` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `riwayat_pemesanan`
+--
+
+INSERT INTO `riwayat_pemesanan` (`id_pemesanan`, `tgl_pemesanan`, `email_pemesan`, `film`, `tanggal_tayang`, `waktu`, `bioskop`, `jumlah_tiket`, `total_harga`, `id_tiket`, `id_user`, `id_bioskop`) VALUES
+(1011, '2023-05-13 11:17:47', 'ryanda@gmail.com', 'GUARDIANS OF THE GALAXY VOL. 3', '2023-05-20', '19:30:00', 'Platinum Cineplex', 4, 140000, 0, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -151,7 +160,7 @@ INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `role`) VALUES
 (2, 'nami', 'nami@gmail.com', '123', 'staff'),
 (3, 'eggy', 'eggy@gmail.com', '123', 'admin'),
 (4, 'brillian', 'brillian@gmail.com', '123', 'pembeli'),
-(181, 'tes', 'tes@email.com', '123', 'pembeli');
+(182, 'player', 'asdad@gmail.com', '123', 'pembeli');
 
 --
 -- Indexes for dumped tables
@@ -209,7 +218,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT untuk tabel `riwayat_pemesanan`
 --
 ALTER TABLE `riwayat_pemesanan`
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1012;
 
 --
 -- AUTO_INCREMENT untuk tabel `tiket`
@@ -221,7 +230,7 @@ ALTER TABLE `tiket`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
