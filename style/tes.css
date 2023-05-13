@@ -33,6 +33,11 @@ table {
     margin-right: 10px;
     cursor: pointer;
   }
+
+  .btn-danger:hover {
+    color: black;
+    background-color:gray;
+  }
   
   .btn-warning {
     background-color: #FFC107;
@@ -43,4 +48,9 @@ table {
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+  }
+
+  .btn-warning:hover {
+    color: black;
+    background-color:gray;
   }
