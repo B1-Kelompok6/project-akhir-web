@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2023 at 03:47 AM
+-- Generation Time: May 13, 2023 at 04:10 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -55,8 +55,8 @@ INSERT INTO `bioskop` (`id_bioskop`, `nama_bioskop`, `domisili_bioksop`, `alamat
 
 CREATE TABLE `review` (
   `id_rate` int(11) NOT NULL,
-  `penilaian` int(11) NOT NULL,
-  `komentar` tinytext NOT NULL,
+  `penilaian` int(11) DEFAULT NULL,
+  `komentar` tinytext DEFAULT NULL,
   `id_tiket` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
