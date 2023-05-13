@@ -21,7 +21,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: inherit;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -50,7 +50,7 @@ footer {
 
 .footer-links li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 .footer-links a {
