@@ -58,7 +58,7 @@ if (isset($_POST['login'])) {
             <br>
             <button type="submit" name="login">LOGIN</button>
             <br>
-            <p> belum punya akun? <a href="register.php">Daftar</a></p>
+            <p> Belum punya akun? <a href="register.php">Daftar</a></p>
             <?php if($error != ''){ ?>
                 <div style="color: red; text-align:center;"><?php echo $error; ?></div>
             <?php } ?>
