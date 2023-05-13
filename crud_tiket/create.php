@@ -75,7 +75,7 @@ if (isset($_POST['add'])) {
         </div>
         <div class="form-group">
             <label>Sinopsis:</label>
-            <textarea name="sinopsis" class="form-control" placeholder="Masukkan sinopsis" required></textarea>
+            <textarea name="sinopsis" class="form-control" placeholder="Masukkan sinopsis" required style="height: 150px;"></textarea>
         </div>
         <div class="form-group">
             <label>Durasi:</label>

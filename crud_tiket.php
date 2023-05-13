@@ -124,7 +124,8 @@ if (!$result) {
                   <td><?php echo $row['studio']?></td>
                   <td class="set">
                       <a href="crud_tiket/update.php?id=<?php echo $row['id_tiket']?>" class="btn-danger-tiket" role="button">Update</a><br>
-                      <a href="crud_tiket/delete.php?id=<?php echo $row['id_tiket']?>" class="btn-warning-tiket" role="button">Delete</a>
+                      <a href="crud_tiket/delete.php?id=<?php echo $row['id_tiket']?>" class="btn-warning-tiket" role="button">Delete</a><br>
+                      <a href="crud_tiket/add_review.php?id=<?php echo $row['id_tiket']?>" class="btn-review-tiket" role="button">Review</a>
                   </td>
               </tr>
               <?php
