@@ -122,8 +122,10 @@ if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
     <p>Total harga: Rp <span id="total-harga"></span></p>
       <input type="hidden" name="total_harga" id="input-total-harga">
     
+    <div class="tombol">
+      <a href="user_page.php" id="back">Kembali</a>   
       <button type="submit" id="pesan">Lanjutkan</button>
-    <a href="user_page.php">Kembali</a>
+    </div>
     </form>
     
     <script>
