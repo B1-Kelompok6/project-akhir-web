@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_5" directorySegmentName="seg_0" id="A60F424F-4FDE-D91F-3C32-D13211BE82CB">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<sourcePk>BF7729A9-B2EA-99AF-8EE4-21654252661F</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>memiliki</nameOnSource>
+<nameOnTarget>dimiliki</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1AF2B267-9C46-A0CF-ADB1-5B3DE96636EF</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>00AA4E70-7731-7828-2FD9-0D64624AAADF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

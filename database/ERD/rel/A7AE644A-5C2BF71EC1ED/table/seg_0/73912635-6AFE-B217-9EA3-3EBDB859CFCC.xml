@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="73912635-6AFE-B217-9EA3-3EBDB859CFCC" name="riwayat_pemesanan">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>0AC7DF79-1176-4D7B-5B04-494D15A74BBE</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pemesanan" id="63CCF9C6-9F59-C458-EAC0-D7453D818710">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>40CFC4CE-046E-7404-4852-3CAE90B9D9E8</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tgl_pemesanan" id="954AAE97-CFE4-9F74-0C48-DB33A0330303">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>FC6E8C0F-931C-C4C3-4957-0866249F1428</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email_pemesan" id="1345BE72-B00A-9003-9AE7-E133ACCC6450">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>A836751E-A661-B731-2373-7C52A098BCE7</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="film" id="6EFEBF06-C61A-F8DF-CD85-C234635C6401">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>E76386A9-2A30-AF60-F071-43C5A739F5EA</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bioskop" id="B5841162-3483-E09D-17F9-5A3C58EB27D1">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>0A8E15D3-B542-46D3-919E-0FC22653016E</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="jumlah_tiket" id="6C63A29C-7914-9ABA-7C08-1293DB423587">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>BFBD8986-D378-16A2-8D89-4E97E6605E04</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="total_harga" id="11A67817-FCC8-5D72-0A66-3A3E5B385D64">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>01473AB1-54A4-A4EB-23F3-51B38D719BD9</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_id_user" id="7B78F669-B311-C9A2-0BC4-0CFD385C4FD2">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>B7B16107-D8EA-6224-CB2B-DD5FA371A3A4</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DBD63740-3C5E-6263-E58E-539EC9145D01" referredColumn="161A6D90-5348-6722-31F1-FF08B502B0C4"/>
+</associations>
+</Column>
+<Column name="tiket_id_tiket" id="25069875-8FFA-D8BC-9139-AB3D7EB502A2">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>DB0D71F0-0B70-4AA1-2DB6-00ADF1B9B05D</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="61F27B18-AEAC-7C50-88FE-3E4310A42D23" referredColumn="B011C12A-D314-E478-6D5F-79FF7384BA04"/>
+</associations>
+</Column>
+<Column name="bioskop_id_bioskop" id="B5B46E76-F247-438B-38B8-3586CD4A0335">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>43AAD6D8-ACF7-97F1-A60C-283C1004BA4E</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="71F86E3F-52ED-0003-D0C6-10ACA5DF8587" referredColumn="C4211435-9B34-3865-10CD-D24616F53A09"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EFB6BB96-30FA-F47B-2A9B-95370B3331F9" name="riwayat_pemesanan_PK">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>9B12DB59-7B6B-DFF4-E366-F015B7CC878A</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63CCF9C6-9F59-C458-EAC0-D7453D818710"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7EBC7804-4355-DAD0-F040-93CFFBC837D8" name="riwayat_pemesanan_USER_FK">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>095D6F65-4599-9F1E-4959-DD73DF434106</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B78F669-B311-C9A2-0BC4-0CFD385C4FD2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5198825E-10A7-114C-99EE-07A14820929C" name="riwayat_pemesanan_tiket_FK">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>81B1B652-A4CE-67B0-1855-8950819D451E</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25069875-8FFA-D8BC-9139-AB3D7EB502A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B644A2C9-8B18-9554-0565-F2D682CE08AE" name="riwayat_pemesanan_bioskop_FK">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>9C5258BC-52F8-D23B-ACC3-B8878320E85C</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5B46E76-F247-438B-38B8-3586CD4A0335"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

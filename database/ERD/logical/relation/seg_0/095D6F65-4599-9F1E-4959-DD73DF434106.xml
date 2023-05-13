@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_1" directorySegmentName="seg_0" id="095D6F65-4599-9F1E-4959-DD73DF434106">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<sourcePk>70467368-2582-0E59-9A92-8E6E01E0DD4B</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>melakukan</nameOnSource>
+<nameOnTarget>dilakukan</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>57BC2077-6004-BB6F-089A-2873D05A4AA6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0AC7DF79-1176-4D7B-5B04-494D15A74BBE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="12F7D0DC-76A6-F7CF-BB0E-6D7F9F5686DB" name="bioskop">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>E6DB665C-ADBE-424E-88E0-9F3CCA8F6414</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_bioskop" id="C4211435-9B34-3865-10CD-D24616F53A09">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>85C5B282-146A-B76F-AC01-584F2D1C2488</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nama_bioskop" id="A2C50E44-355F-C521-3946-BA6BADC615AC">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>DF3680B7-4816-0018-BA62-9ECDB1635F8F</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="domisili_bioskop" id="DE2D2695-6DA9-8642-E85F-6F2675652853">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>2B09292F-9416-5FD4-D2F7-D38D64EDF995</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="alamat_bioskop" id="9FC5FB70-F348-B7C9-E6E0-AEFD1AEBC4E3">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>208F2926-271F-0C4C-8F8C-A755E33CCFAB</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telp_bioskop" id="46293895-953B-2ED9-FF48-126B41B66EE5">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>E41DABBB-A7FE-D6E5-1584-44489E22AC6A</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C1196963-85F6-E65E-2AF9-76FE72B1BD8B" name="bioskop_PK">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:52:39 UTC</createdTime>
+<generatorID>1EED91E4-5F7F-EE93-E5A1-67F0CBF00BE1</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4211435-9B34-3865-10CD-D24616F53A09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

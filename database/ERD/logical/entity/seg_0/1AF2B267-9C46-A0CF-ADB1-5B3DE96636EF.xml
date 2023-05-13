@@ -1,0 +1,201 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1AF2B267-9C46-A0CF-ADB1-5B3DE96636EF" name="tiket">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_tiket" id="CCF4FC7D-408F-8563-5E30-CE7BBE6FB90E">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>BA54680D-F28E-2638-B41B-4424D6BD28CF</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="judul_film" id="F7424E80-D281-4663-BF29-CC19A729C148">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6183DC6B-0943-D377-7452-C0519544F1BC</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_film" id="38F9446F-CDA4-28DB-D443-1F4D16B589D7">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>17FCEE23-81D0-3F59-B040-BDBDAED68FA3</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="jadwal_tayang" id="F0E04B92-C911-5B91-0249-5D64D1A07E80">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>BD4A4C5A-D500-E6CE-D406-D4E975D34905</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waktu" id="DEAC0A8A-1E4D-28ED-C28B-9597AE9D059A">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>DE0E93B3-E49F-9B51-4972-FD3F2D657A45</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="harga_tiket" id="9C7FFD00-1983-5ED8-31AE-586D79341163">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>1FA81317-480A-9B89-F122-6713170D70D4</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="poster" id="8100EBDD-D544-BF86-2C9E-0169F005A3FA">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>07C32CAC-6BC7-571A-E7DB-215EECE2BD18</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sinopsis" id="29F6B55A-2173-D948-67E7-E8BDBA8D47B8">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>35B7752F-B298-A151-1671-FF589F00B82E</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="durasi" id="D8C4ED45-783E-2866-0A75-DEC8A2F6DC2B">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>352B8F0E-D4C5-4D66-BF9C-9447E0CCE9BF</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rating" id="0122A078-3D8F-8AC3-E4B3-BE2CC0F3D0B5">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>D4FBD756-D05D-7265-EB17-4F46A4BE92E7</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="studio" id="297B4B3F-F0DA-B972-5968-5F0F18CB2256">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6F4DF59E-3CBD-F133-4A7C-15FCDB690A7D</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="trailer" id="4A0ECE59-E13B-2EAF-6E02-CE4E37135C14">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>B48942AC-81E4-250D-8230-16551FDF5FAF</importedID>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BF7729A9-B2EA-99AF-8EE4-21654252661F" name="tiket PK">
+<createdBy>Namira</createdBy>
+<createdTime>2023-05-13 01:50:24 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A7AE644A-D437-4971-2A08-5C2BF71EC1ED" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CCF4FC7D-408F-8563-5E30-CE7BBE6FB90E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
