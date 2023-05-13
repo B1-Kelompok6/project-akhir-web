@@ -36,7 +36,8 @@ if (mysqli_num_rows($query2) > 0) {
                 $query = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
                 if (mysqli_num_rows($query) > 0) {
                     while ($data = mysqli_fetch_array($query)) {
-                        echo "Halo, ".$data['username']."!";
+                        echo "<img src='img/avatar.png' alt='Avatar'>";
+                        echo $data['email'];
                     }
                 }
                 ?>

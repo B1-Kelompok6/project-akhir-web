@@ -27,10 +27,9 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
                 $email = $_SESSION['email'];
                 $query = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
                 if (mysqli_num_rows($query) > 0) {
-                    // Looping data dari tabel user
                     while ($data = mysqli_fetch_array($query)) {
-                        // Menampilkan sapaan dengan nama user
-                        echo "Halo, ".$data['username']."!";
+                        echo "<img src='img/avatar.png' alt='Avatar'>";
+                        echo $data['email'];
                     }
                 }
                 ?>

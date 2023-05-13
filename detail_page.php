@@ -3,19 +3,13 @@ include 'koneksi.php';
 
 $id_tiket = $_GET['id'];
 
-
-// Mengambil data tiket yang dipilih
 $query = mysqli_query($conn, "SELECT * FROM tiket WHERE id_tiket = $id_tiket");
 $data = mysqli_fetch_array($query);
 
 $query2 = "SELECT * FROM review WHERE id_tiket = $id_tiket";
 $hasil = mysqli_query($conn, $query2);
 
-// Mengubah data poster menjadi format gambar
 $gambar = base64_encode($data['poster']);
-
-// Menutup koneksi ke database
-mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +48,18 @@ mysqli_close($conn);
             }
         }else{
             if ($data['status_film'] == 'playing') { ?>
-            
+                <div class="welcome">
+                    <?php
+                    $email = $_SESSION['email'];
+                    $query3 = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
+                    if (mysqli_num_rows($query3) > 0) {
+                        while ($data3 = mysqli_fetch_array($query3)) {
+                            echo "<img src='img/avatar.png' alt='Avatar'>";
+                            echo $data3['email'];
+                        }
+                    }
+                    ?>
+                </div>
                 <ul class="nav">
                     <li><a href="user_page.php" class="active">Now Playing</a></li>
                     <li><a href="user_page2.php">Up Coming</a></li>
@@ -63,6 +68,18 @@ mysqli_close($conn);
                 </ul>
             <?php
             }else{ ?>
+                <div class="welcome">
+                    <?php
+                    $email = $_SESSION['email'];
+                    $query3 = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
+                    if (mysqli_num_rows($query3) > 0) {
+                        while ($data3 = mysqli_fetch_array($query3)) {
+                            echo "<img src='img/avatar.png' alt='Avatar'>";
+                            echo $data3['email'];
+                        }
+                    }
+                    ?>
+                </div>
                 <ul class="nav">
                     <li><a href="user_page.php">Now Playing</a></li>
                     <li><a href="user_page2.php" class="active">Up Coming</a></li>
@@ -133,6 +150,5 @@ mysqli_close($conn);
         </div>
     </div>
     <script src="js/script.js"></script>
-
 </body>
 </html>

@@ -22,11 +22,11 @@ $data_harga = mysqli_fetch_array($query_harga);
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/seat.css" />
-    <title>Movie Seat Booking</title>
+    <title>Seat Booking</title>
   </head>
   <body>  
     <div class="movie-container">
-      <form method="POST" action="pesan.php?id=<?php echo $id_tiket . '&id_user=' . $id_user; ?>"
+      <form method="POST" action="pesan.php?id=<?php echo $id_tiket . '&id_user=' . $id_user;?>"
       <label> Pilih bioskop:</label>
       <select name="bioskop" id="movie">;
         <?php while($row = mysqli_fetch_assoc($data)) {
