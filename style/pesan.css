@@ -89,3 +89,25 @@ body {
 	background-color: gray;
 }
 
+
+#submit {
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	width: 100px;
+	padding: 8px;
+	margin-top: 25px;
+	margin-left: 250px;
+	border: none;
+	margin-bottom: -20px;
+	background-color: orange;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+  }
+
+  #submit:hover {
+	color: black;
+	background-color:gray;
+  }

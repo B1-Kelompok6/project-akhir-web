@@ -20,6 +20,10 @@ body{
 }
 
 .wrapper{
+    position: fixed; /* tambahkan properti ini */
+    top: 0; /* atur jarak dari atas */
+    left: 0; /* atur jarak dari kiri */
+    right: 0; /* atur jarak dari kanan */
     /* border: 2px solid white; */
     margin-top: 0;
     display: flex;
@@ -105,20 +109,19 @@ h1 {
 }
 
 .tiket-container {
-    /* border : 2px solid red; */
     display: flex;
     flex-wrap: wrap;
     /* justify-content: center; */
     margin-left: 124px;
     margin-right: 124px;
-    margin-top: 30px;
+    margin-top: 110px;
     
 }
 
 .tiket-item {
-    /* border : 2px solid red;  */
     width: 250px;
     margin: 0.5rem;
+    margin-top: 15px !important;
     border: 4px solid white;
     border-radius: 5px;
     overflow: hidden;
@@ -170,6 +173,7 @@ h1 {
 }
 
 .parallax{
+    top: 100px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -227,7 +231,8 @@ h1 {
 
 
 .tiket-detail {
-    padding: 5px;
+    margin-top: 160px !important;
+    padding: 10px;
     /* border:5px solid red; */
     /* margin-left: 100px;
     margin-right: 100px; */

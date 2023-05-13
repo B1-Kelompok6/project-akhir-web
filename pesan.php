@@ -91,7 +91,7 @@ if(isset($_POST['submit'])){
 				<input type="hidden" name="total" value="<?= $total ?>">
 				<input type="hidden" name="id_bioskop" value="<?= $id_bioskop ?>">
 
-                <button type="submit" name="submit">Bayar</button>
+                <button type="submit" name="submit" id="submit">Bayar</button>
 			</form>
 			</div>
 		</div>
