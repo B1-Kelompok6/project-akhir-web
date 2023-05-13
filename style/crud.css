@@ -77,10 +77,16 @@ table td{
     border: none;
     border-radius: 5px;
     background-color: orange;
-    color: white;
     font-size: 16px;
     cursor: pointer;
+    color: #fff;
+    font-size: 16px;
 }
+
+.search-button:hover {
+    color: black;
+    background-color:gray;
+  }
 
 .btn-danger{
     border: 1px solid orange;
@@ -89,9 +95,15 @@ table td{
     margin-right: 5px;
     margin-left: -30px;
     text-decoration: none;
-    color: aliceblue;
     border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
 }
+
+.btn-danger:hover {
+    color: black;
+    background-color:gray;
+  }
 
 .btn-warning{
     border: 1px solid red;
@@ -99,32 +111,49 @@ table td{
     padding: 7px;
     margin-left: 5px;
     margin-right: -30px;
-    color: white;
     text-decoration: none;
     border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
 }
+
+.btn-warning:hover {
+    color: black;
+    background-color:gray;
+  }
 
 .btn-danger-tiket{
     border: 1px solid orange;
     background-color: orange;
     padding: 7px;
     text-decoration: none;
-    color: aliceblue;
     border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
 }
+
+.btn-danger-tiket:hover {
+    color: black;
+    background-color:gray;
+  }
 
 .btn-warning-tiket{
     border: 1px solid red;
     background-color: red;
     padding: 7px;
-    color: white;
     text-decoration: none;
     border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
 }
+
+.btn-warning-tiket:hover {
+    color: black;
+    background-color:gray;
+  }
 
 .btn-primary{
     background-color: rgb(34, 73, 180);
-    color:  white;
     margin-bottom: 10px;
     padding: 7px;
     bottom: 0;
@@ -132,19 +161,31 @@ table td{
     margin-left: 2px;
     text-decoration: none;
     border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
 }
+
+.btn-primary:hover {
+    color: black;
+    background-color:gray;
+  }
 
 .btn-secondary{
     background-color: rgb(34, 73, 180);
-    color:  white;
     margin-bottom: 10px;
     padding: 7px;
     bottom: 0;
     margin-right: 20px;
     text-decoration: none;
     border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
 }
 
+.btn-secondary:hover {
+    color: black;
+    background-color:gray;
+  }
 
 .tes{
     margin-bottom: 20px;

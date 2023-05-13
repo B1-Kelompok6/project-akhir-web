@@ -59,6 +59,7 @@ th {
 }
 
 #back {
+	font-weight: bold;
     border: 1px solid orange;
     background-color: orange;
 	text-align: center;
@@ -68,8 +69,9 @@ th {
     /* margin-right: -30px; */
     /* margin-left: 10px; */
     text-decoration: none;
-    color: rgb(21, 21, 46);;
+    color: #fff;
     border-radius: 5px;
+	font-size: 16px;
     position: absolute;
     left: 50%;
 	margin-top: 10px;
@@ -79,6 +81,6 @@ th {
   
   
   #back:hover {
-    color: rgb(21, 21, 46);;
-    background-color: rgb(255, 185, 56)
+		color: black;
+		background-color:gray;
   }
