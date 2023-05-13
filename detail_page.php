@@ -90,7 +90,7 @@ mysqli_close($conn);
                 if ($data['status_film'] == 'playing') {?>
                     <p><b>Sinopsis:</b> <?php echo $data['sinopsis']; ?></p><br>
                     <p><b>Tanggal tayang:</b> <?php echo $data['jadwal_tayang']; ?></p>
-                    <p><b>Waktu tayang:</b> <?php echo $data['waktu']; ?> WITA</p>
+                    <p><b>Waktu tayang:</b> <?php echo $data['waktu']; ?>:00</p>
                     <p><b>Harga tiket:</b> Rp <?php echo number_format($data['harga_tiket'], 0 , ',', '.'); ?></p>
                     <p><b>Durasi:</b> <?php echo $data['durasi']; ?> Menit</p>
                     <div class="detail-btn-container">
@@ -103,7 +103,7 @@ mysqli_close($conn);
                     <p><b>Sinopsis:</b> <?php echo $data['sinopsis']; ?></p><br>
                     <p><b>Tanggal tayang:</b> -</p>
                     <p><b>Waktu tayang:</b> -</p>
-                    <p><b>Harga tiket:</b> Rp -,</p>
+                    <p><b>Harga tiket:</b> -</p>
                     <p><b>Durasi:</b> <?php echo $data['durasi']; ?> Menit</p>
                     <div class="detail-btn-container">
                         <button class="detail-btn buy-btn2">Review</button>
