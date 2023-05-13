@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2023 at 03:40 AM
+-- Generation Time: May 13, 2023 at 03:47 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -57,7 +57,7 @@ CREATE TABLE `review` (
   `id_rate` int(11) NOT NULL,
   `penilaian` int(11) NOT NULL,
   `komentar` tinytext NOT NULL,
-  `id_tiket` int(11) DEFAULT NULL
+  `id_tiket` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -76,12 +76,12 @@ INSERT INTO `review` (`id_rate`, `penilaian`, `komentar`, `id_tiket`) VALUES
 CREATE TABLE `riwayat_pemesanan` (
   `id_pemesanan` int(11) NOT NULL,
   `tgl_pemesanan` date NOT NULL,
-  `email_pemesan` varchar(30) DEFAULT NULL,
+  `email_pemesan` varchar(30) NOT NULL,
   `film` varchar(30) NOT NULL,
   `bioskop` varchar(30) NOT NULL,
   `jumlah_tiket` int(11) NOT NULL,
   `total_harga` int(11) NOT NULL,
-  `id_tiket` int(11) DEFAULT NULL,
+  `id_tiket` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_bioskop` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -104,7 +104,7 @@ CREATE TABLE `tiket` (
   `durasi` int(11) NOT NULL,
   `rating` varchar(5) NOT NULL,
   `studio` varchar(10) NOT NULL,
-  `trailer` varchar(50) DEFAULT NULL
+  `trailer` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
