@@ -62,5 +62,6 @@ if(!isset($_SESSION['email']) || $_SESSION['role'] != 'pembeli'){
     </section>
 
     <script src="js/script.js"></script>
+    <?php include "footer.php"?>
 </body>
 </html>

@@ -86,7 +86,7 @@ mysqli_close($conn);
                 </div>
 
                 <?php 
-                $id_user = $_GET['id_user'];
+                $id_user = isset($_GET['id_user']) ? $_GET['id_user'] : null;
                 if ($data['status_film'] == 'playing') {?>
                     <p><b>Sinopsis:</b> <?php echo $data['sinopsis']; ?></p><br>
                     <p><b>Tanggal tayang:</b> <?php echo $data['jadwal_tayang']; ?></p>
@@ -109,12 +109,6 @@ mysqli_close($conn);
                         <button class="detail-btn buy-btn2">Review</button>
                         <a href="<?php echo $data['trailer']; ?>" target="_blank"><button class="detail-btn trailer-btn">Trailer</button></a>
                         <button class="detail-btn buy-btn2">Buy Ticket</button>
-                    </div>
-                    <div id="lightbox" class="lightbox">
-                        <div class="lightbox-content">
-                            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-                            <iframe id="video-iframe" class="video-iframe" src="" frameborder="0" allowfullscreen></iframe>
-                        </div>
                     </div>
                     <?php 
                     }

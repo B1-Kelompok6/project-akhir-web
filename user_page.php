@@ -86,5 +86,6 @@ if (mysqli_num_rows($query2) > 0) {
         mysqli_close($conn);
         ?>
     </div>
+    <?php include "footer.php"?>
 </body>
 </html>

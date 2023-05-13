@@ -1,5 +1,10 @@
 <?php 
 include "koneksi.php";
+
+if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
+  header("Location: login.php");
+}
+
 $id_tiket = $_GET['id'];
 $id_user = $_GET['id_user'];
 
@@ -8,11 +13,6 @@ $data = mysqli_query($conn, $query);
 
 $query_harga = mysqli_query($conn, "SELECT * FROM tiket WHERE id_tiket = $id_tiket");
 $data_harga = mysqli_fetch_array($query_harga);
-
-
-if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
-  header("Location: login.php");
-}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ if(!isset($_SESSION['email']) || ($_SESSION['role'] != 'pembeli')){
     <div class="movie-container">
       <form method="POST" action="pesan.php?id=<?php echo $id_tiket . '&id_user=' . $id_user; ?>"
       <label> Pilih bioskop:</label>
-      <select name="theater" id="movie">;
+      <select name="bioskop" id="movie">;
         <?php while($row = mysqli_fetch_assoc($data)) {
           echo '<option value="' . $row['nama_bioskop'] . '">' . $row['nama_bioskop'] . '</option>';
         } ?>
