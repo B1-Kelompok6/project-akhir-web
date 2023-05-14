@@ -3,15 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
 -- Waktu pembuatan: 14 Bulan Mei 2023 pada 08.54
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.27
-=======
--- Generation Time: May 14, 2023 at 07:51 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
->>>>>>> 5129e56f034ac22c0044191b436c309192aae6b3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -108,10 +102,7 @@ INSERT INTO `riwayat_pemesanan` (`id_pemesanan`, `tgl_pemesanan`, `email_pemesan
 (1016, '2023-05-14 09:49:00', 'ryanda@gmail.com', 'THE SUPER MARIO BROS. MOVIE', '2023-05-22', '18:15:00', 'CGV Plaza Mulia', 1, 35000, 1, 1, 1);
 =======
 (1012, '2023-05-13 23:22:22', 'fizi@gmail.com', 'EVIL DEAD RISE', '2023-05-18', '20:00:00', 'CGV Plaza Mulia', 2, 60000, 2014, 183, 1),
-(1013, '2023-05-14 02:59:10', 'ryanda@gmail.com', 'LOVE AGAIN', '2023-05-18', '15:45:00', 'Cinépolis Living Pla', 2, 60000, 2028, 1, 3),
-(1014, '2023-05-14 13:32:37', 'nala@gmail.com', 'THE SUPER MARIO BROS. MOVIE', '2023-05-22', '18:15:00', 'SCP 21', 2, 70000, 1, 184, 4),
-(1015, '2023-05-14 13:41:42', 'nala@gmail.com', 'THE SUPER MARIO BROS. MOVIE', '2023-05-22', '18:15:00', 'CGV Plaza Mulia', 2, 70000, 1, 184, 1);
->>>>>>> 5129e56f034ac22c0044191b436c309192aae6b3
+(1013, '2023-05-14 02:59:10', 'ryanda@gmail.com', 'LOVE AGAIN', '2023-05-18', '15:45:00', 'Cinépolis Living Pla', 2, 60000, 2028, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -182,9 +173,7 @@ INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `role`) VALUES
 =======
 (4, 'brillian', 'brillian@gmail.com', '123', 'pembeli'),
 (182, 'player', 'asdad@gmail.com', '123', 'pembeli'),
-(183, 'fizi', 'fizi@gmail.com', '123', 'pembeli'),
-(184, 'nala', 'nala@gmail.com', '123', 'pembeli');
->>>>>>> 5129e56f034ac22c0044191b436c309192aae6b3
+(183, 'fizi', 'fizi@gmail.com', '123', 'pembeli');
 
 --
 -- Indexes for dumped tables
@@ -243,11 +232,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `riwayat_pemesanan`
 --
 ALTER TABLE `riwayat_pemesanan`
-<<<<<<< HEAD
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1018;
-=======
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1016;
->>>>>>> 5129e56f034ac22c0044191b436c309192aae6b3
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1014;
 
 --
 -- AUTO_INCREMENT for table `tiket`
