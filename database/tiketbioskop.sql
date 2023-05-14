@@ -1,11 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Bulan Mei 2023 pada 21.06
+<<<<<<< HEAD
+-- Waktu pembuatan: 14 Bulan Mei 2023 pada 08.54
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.27
+=======
+-- Generation Time: May 14, 2023 at 07:51 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
+>>>>>>> 5129e56f034ac22c0044191b436c309192aae6b3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,33 +30,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bioskop`
+-- Table structure for table `bioskop`
 --
 
 CREATE TABLE `bioskop` (
   `id_bioskop` int(11) NOT NULL,
-  `nama_bioskop` varchar(20) NOT NULL,
+  `nama_bioskop` varchar(50) NOT NULL,
   `domisili_bioksop` varchar(20) NOT NULL,
-  `alamat_bioskop` varchar(30) NOT NULL,
+  `alamat_bioskop` varchar(50) NOT NULL,
   `telp_bioskop` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `bioskop`
+-- Dumping data for table `bioskop`
 --
 
 INSERT INTO `bioskop` (`id_bioskop`, `nama_bioskop`, `domisili_bioksop`, `alamat_bioskop`, `telp_bioskop`) VALUES
 (1, 'CGV Plaza Mulia', 'Samarinda', 'Jl. Bhayangkara No.58', NULL),
-(2, 'Pentacity XXI', 'Balikpapan', 'Pentacity Mall, Jl. Jenderal S', '(0542) 85260'),
-(3, 'Cinépolis Living Pla', 'Balikpapan', ' 2nd Floor Living Plaza Balikp', NULL),
-(4, 'SCP 21', 'Samarinda', 'Samarinda Central Plaza, Jl. P', '(0541) 74963'),
-(5, 'Platinum Cineplex', 'Magelang', 'Mall Armada Town Square Upper ', '(0293) 32188'),
+(2, 'Pentacity XXI', 'Balikpapan', 'Pentacity Mall, Jl. Jenderal Sudirman No.47', '(0542) 85260'),
+(3, 'Cinépolis Living Plaza', 'Balikpapan', ' 2nd Floor Living Plaza Balikpapan', NULL),
+(4, 'SCP 21', 'Samarinda', 'Samarinda Central Plaza, Jl. P. Irian No.1', '(0541) 74963'),
+(5, 'Platinum Cineplex', 'Magelang', 'Mall Armada Town Square ', '(0293) 32188'),
 (6, 'Movimax Kaza City', 'Surabaya', 'Kaza Mall, Jl. Kapas Krampung ', '(031) 373930');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `review`
+-- Table structure for table `review`
 --
 
 CREATE TABLE `review` (
@@ -61,20 +67,19 @@ CREATE TABLE `review` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `review`
+-- Dumping data for table `review`
 --
 
 INSERT INTO `review` (`id_rate`, `penilaian`, `komentar`, `id_tiket`) VALUES
 (1, 87, 'Secara garis besar, perpaduan komedi dan kisah emosional yang pas berhasil membuat Guardians of the Galaxy Vol 3 menjadi ending yang manis bagi sejumlah karakternya.', 0),
 (2, 85, 'The Super Mario Bros Movie konsisten meninggalkan kesan yang sama, lucu dan menggemaskan secara keseluruhan. Salah satu film yang bisa dinikmati antara anak dengan orang tuanya di libur panjang seperti saat ini.', 1),
 (9, 80, 'Buat kamu yang pada dasarnya suka dengan tontonan bergenre horor, kemungkinan besar kamu akan merasa senang selama menonton film ini. Soalnya, elemen horor yang ada dalam film ini benar-benar terasa tereksekusi dengan maksimal. Salah satu faktor yang membuat elemen horor pada film ini berhasil adalah sinematografi serta scoring-nya. Sebagian besar adegannya menggunakan angle kamera close-up yang kemungkinan bertujuan untuk membuat momen yang gore jadi terasa lebih ngilu dan jijik. Selain itu, angle close-up ini juga membuat penonton menjadi semakin tidak nyaman ketika menampilkan Ellie dengan sangat dekat. Sementara itu, scoring yang terdengar sukses membuat jantung penonton berdebar sepanjang adegan mengerikannya.', 2014),
-(10, 92, 'Bila pada tiga chapter sebelumnya penonton masih bisa bernafas, kali ini penulis Shay Hatten dan Michael Finch tak membiarkan penonton berleha-leha. Pemburu John Wick pada babak ini seolah tak pernah habis. Apalagi, nilai bayaran untuk kepala John Wick yang berstatus Excommunicado dari High Table terus bertambah seiring perjalanan durasi film, dan diikuti dengan jumlah pemburu John Wick. Stahelski juga membuat tokoh-tokoh lain seakan percaya bahwa Wick pantas dijuluki Baba Yaga alias The Boogimen lewat aksi-aksinya yang hardcore. Tak usah ditanya berapa banyak tembakan, tusukan, dan pukulan yang melintas pada chapter ini.', 5),
-(11, 50, 'Sudah lama rasanya tidak menonton film romansa dengan alur super ringan dan kisah yang cukup cheesy. Sulit dipungkiri, menonton film-film semacam ini terkadang menjadi guilty pleasure bagi kami. Yup, satu sisi seperti merasa bersalah sendiri karena alurnya terkesan tidak masuk akal dengan kisah cinta yang too good too be true, namun satu sisi saya ikut tersipu malu melihatnya. Jika berbicara soal teknis dan skenarionya, film semacam ini memang jauh dari kata sempurna. Beberapa orang mungkin akan memandang sebelah mata, tetapi selama penonton bisa menikmati dan terhibur, why not?', 2028);
+(10, 92, 'Bila pada tiga chapter sebelumnya penonton masih bisa bernafas, kali ini penulis Shay Hatten dan Michael Finch tak membiarkan penonton berleha-leha. Pemburu John Wick pada babak ini seolah tak pernah habis. Apalagi, nilai bayaran untuk kepala John Wick yang berstatus Excommunicado dari High Table terus bertambah seiring perjalanan durasi film, dan diikuti dengan jumlah pemburu John Wick. Stahelski juga membuat tokoh-tokoh lain seakan percaya bahwa Wick pantas dijuluki Baba Yaga alias The Boogimen lewat aksi-aksinya yang hardcore. Tak usah ditanya berapa banyak tembakan, tusukan, dan pukulan yang melintas pada chapter ini.', 5);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `riwayat_pemesanan`
+-- Table structure for table `riwayat_pemesanan`
 --
 
 CREATE TABLE `riwayat_pemesanan` (
@@ -93,18 +98,25 @@ CREATE TABLE `riwayat_pemesanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `riwayat_pemesanan`
+-- Dumping data for table `riwayat_pemesanan`
 --
 
 INSERT INTO `riwayat_pemesanan` (`id_pemesanan`, `tgl_pemesanan`, `email_pemesan`, `film`, `tanggal_tayang`, `waktu`, `bioskop`, `jumlah_tiket`, `total_harga`, `id_tiket`, `id_user`, `id_bioskop`) VALUES
 (1011, '2023-05-13 00:00:00', 'ryanda@gmail.com', 'GUARDIANS OF THE GALAXY VOL. 3', '2023-05-20', '19:30:00', 'Platinum Cineplex', 4, 140000, 0, 1, 5),
+<<<<<<< HEAD
+(1013, '2023-05-14 02:59:10', 'ryanda@gmail.com', 'LOVE AGAIN', '2023-05-18', '15:45:00', 'Cinépolis Living Pla', 2, 60000, 2028, 1, 3),
+(1016, '2023-05-14 09:49:00', 'ryanda@gmail.com', 'THE SUPER MARIO BROS. MOVIE', '2023-05-22', '18:15:00', 'CGV Plaza Mulia', 1, 35000, 1, 1, 1);
+=======
 (1012, '2023-05-13 23:22:22', 'fizi@gmail.com', 'EVIL DEAD RISE', '2023-05-18', '20:00:00', 'CGV Plaza Mulia', 2, 60000, 2014, 183, 1),
-(1013, '2023-05-14 02:59:10', 'ryanda@gmail.com', 'LOVE AGAIN', '2023-05-18', '15:45:00', 'Cinépolis Living Pla', 2, 60000, 2028, 1, 3);
+(1013, '2023-05-14 02:59:10', 'ryanda@gmail.com', 'LOVE AGAIN', '2023-05-18', '15:45:00', 'Cinépolis Living Pla', 2, 60000, 2028, 1, 3),
+(1014, '2023-05-14 13:32:37', 'nala@gmail.com', 'THE SUPER MARIO BROS. MOVIE', '2023-05-22', '18:15:00', 'SCP 21', 2, 70000, 1, 184, 4),
+(1015, '2023-05-14 13:41:42', 'nala@gmail.com', 'THE SUPER MARIO BROS. MOVIE', '2023-05-22', '18:15:00', 'CGV Plaza Mulia', 2, 70000, 1, 184, 1);
+>>>>>>> 5129e56f034ac22c0044191b436c309192aae6b3
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tiket`
+-- Table structure for table `tiket`
 --
 
 CREATE TABLE `tiket` (
@@ -123,7 +135,7 @@ CREATE TABLE `tiket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tiket`
+-- Dumping data for table `tiket`
 --
 
 INSERT INTO `tiket` (`id_tiket`, `judul_film`, `status_film`, `jadwal_tayang`, `waktu`, `harga_tiket`, `poster`, `sinopsis`, `durasi`, `rating`, `studio`, `trailer`) VALUES
@@ -146,7 +158,7 @@ INSERT INTO `tiket` (`id_tiket`, `judul_film`, `status_film`, `jadwal_tayang`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -158,30 +170,35 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `role`) VALUES
 (1, 'ryanda', 'ryanda@gmail.com', '123', 'pembeli'),
 (2, 'nami', 'nami@gmail.com', '123', 'staff'),
 (3, 'eggy', 'eggy@gmail.com', '123', 'admin'),
+<<<<<<< HEAD
+(4, 'brillian', 'brillian@gmail.com', '123', 'pembeli');
+=======
 (4, 'brillian', 'brillian@gmail.com', '123', 'pembeli'),
 (182, 'player', 'asdad@gmail.com', '123', 'pembeli'),
-(183, 'fizi', 'fizi@gmail.com', '123', 'pembeli');
+(183, 'fizi', 'fizi@gmail.com', '123', 'pembeli'),
+(184, 'nala', 'nala@gmail.com', '123', 'pembeli');
+>>>>>>> 5129e56f034ac22c0044191b436c309192aae6b3
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `bioskop`
+-- Indexes for table `bioskop`
 --
 ALTER TABLE `bioskop`
   ADD PRIMARY KEY (`id_bioskop`),
   ADD UNIQUE KEY `nama_bioskop` (`nama_bioskop`);
 
 --
--- Indeks untuk tabel `review`
+-- Indexes for table `review`
 --
 ALTER TABLE `review`
   ADD PRIMARY KEY (`id_rate`),
@@ -189,7 +206,7 @@ ALTER TABLE `review`
   ADD KEY `id_tiket` (`id_tiket`);
 
 --
--- Indeks untuk tabel `riwayat_pemesanan`
+-- Indexes for table `riwayat_pemesanan`
 --
 ALTER TABLE `riwayat_pemesanan`
   ADD PRIMARY KEY (`id_pemesanan`),
@@ -198,14 +215,14 @@ ALTER TABLE `riwayat_pemesanan`
   ADD KEY `riwayat_pemesanan_ibfk_2` (`id_user`);
 
 --
--- Indeks untuk tabel `tiket`
+-- Indexes for table `tiket`
 --
 ALTER TABLE `tiket`
   ADD PRIMARY KEY (`id_tiket`),
   ADD UNIQUE KEY `judul_film` (`judul_film`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`),
@@ -213,45 +230,49 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `review`
+-- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `id_rate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_rate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT untuk tabel `riwayat_pemesanan`
+-- AUTO_INCREMENT for table `riwayat_pemesanan`
 --
 ALTER TABLE `riwayat_pemesanan`
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1014;
+<<<<<<< HEAD
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1018;
+=======
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1016;
+>>>>>>> 5129e56f034ac22c0044191b436c309192aae6b3
 
 --
--- AUTO_INCREMENT untuk tabel `tiket`
+-- AUTO_INCREMENT for table `tiket`
 --
 ALTER TABLE `tiket`
-  MODIFY `id_tiket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2030;
+  MODIFY `id_tiket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2031;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `review`
+-- Constraints for table `review`
 --
 ALTER TABLE `review`
   ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`id_tiket`) REFERENCES `tiket` (`id_tiket`);
 
 --
--- Ketidakleluasaan untuk tabel `riwayat_pemesanan`
+-- Constraints for table `riwayat_pemesanan`
 --
 ALTER TABLE `riwayat_pemesanan`
   ADD CONSTRAINT `riwayat_pemesanan_ibfk_1` FOREIGN KEY (`id_tiket`) REFERENCES `tiket` (`id_tiket`),
