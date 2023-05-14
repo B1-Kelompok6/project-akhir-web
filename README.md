@@ -1,15 +1,19 @@
-![image](https://github.com/B1-Kelompok6/project-akhir-web/assets/120205407/08c8092f-a6be-4058-89a2-55c41d79c589)
-![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/c797a73e-a1ff-40bc-a712-35283388397e)
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/e7ff628a-fcb3-495a-b919-84f080a8a9d6)
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/702b52c2-656e-426e-9f0e-fe4aacf8d778)
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/fce89fe6-7b52-4a43-a6e1-067718e39ab2)
+
 
 
 
 Project Akhir Praktikum WEB
 Kelompok B1-6  yang terdiri dari
-- Eggy Brillian
-- Namira Aida
-- Ryanda Putra
+- Eggy B. Brillian (2109116057)
+- Namira Aida Hairunnisa (2109116048)
+- Ryanda Putra Nasrullah (2109116053)
 
-memilih tema tiket bioskop dengan judul Cinema KW
+**Memilih tema tiket bioskop dengan judul Cinema KW**
 
 # Tampilan Awal
 ![image](https://github.com/YandaPN/project-akhir-web-1/assets/118449655/19c01d09-b289-4d46-9631-f0325619e3f4)
@@ -117,6 +121,73 @@ Pada riwayat pembelian terdapat nota user yang telah melakukan pembelian tiket d
 
 Dapat melakukan searching
 ![image](https://github.com/YandaPN/project-akhir-web-1/assets/118449655/2f64610c-ed7f-48f2-81ca-2e3cc47a9e49)
+
+# PEMBELI
+## DAFTAR/REGISTRASI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/4476e0a9-7856-493b-a069-65bd7ac2a6c5)
+Saat berada pada halaman login, jika user tidak memiliki akun, maka diharuskan untuk melakukan pendaftaran/registrasi terlebih dahulu sebagai pembeli dengan mengklik kata “Daftar” berwarna hijau di bawah tombol login.
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/37bb5411-529a-43e6-859a-adfdd3648904)
+ 
+## LOGIN
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/a540b2f4-cbbc-4070-84b4-1466eb4965c5)
+Setelah berhasil melakukan pendaftaran/registrasi, kemudian user dapat login sebagai pembeli menggunakan data login yang baru saja dibuat tadi. Namun jika sudah memiliki akun, maka pembeli dapat langsung melakukan login dengan data login yang dimiliki.
+
+## NOW PLAYING – PEMBELI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/f7b28a7c-a282-4912-8c1f-f9407d56c773) 
+Setelah berhasil melakukan login, pembeli akan langsung diarahkan masuk ke halaman NOW PLAYING.
+
+## DETAIL PAGE NOWPLAYING – PEMBELI 
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/25acf244-2532-47d4-8974-dc94fa871397) 
+Kemudian pembeli dapat mengklik film yang diinginkan untuk masuk ke detail page film tersebut. Terdapat beberapa detail dari film, seperti judul, rating, jenis studio, synopsis, tanggal & waktu tayang, harga tiket, dan durasi film. Terdapat juga 3 tombol yang memiliki fungsi berbeda.
+
+## TOMBOL REVIEW – PEMBELI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/db777926-4b0b-4bc4-af8e-946bd731b1cc)
+Jika pembeli mengklik tombol review, maka akan muncul review singkat yang berisikan skor dan komentar mengenai film tersebut.
+
+## TOMBOL TRAILER – PEMBELI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/583e329b-132f-4e5a-894f-2b6dc4e66e2c)
+Saat pembeli mengklik tombol trailer, maka akan diarahkan menuju tab youtube yang berisikan trailer dari film tersebut.
+
+## TOMBOL BUY TICKET – PEMBELI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/98a0d4a7-d1df-45e1-9819-8d21f5b1dcb3)
+Saat mengklik tombol buy ticket, maka pembeli akan diarahkan ke halaman untuk memesan tiket. Disini pembeli dapat memilih tempat bioskop yang diinginkan dan jumlah serta tempat duduk yang ingin dipesan. Terdapat juga total harganya.
+
+## KONFIRMASI PEMESANAN
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/5b7e5838-cf96-444f-99ec-46ca49064829) 
+Setelah selesai memilih bioskop dan kursi, ketika pembeli mengklik tombol lanjutkan, maka pembeli akan diarahkan ke halaman konfirmasi pemesanan sebelum tiket benar – benar akan dibeli.
+
+## INVOICE
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/41f36c04-5fd1-4d8e-97b2-60da6690c16b) 
+Setelah pembeli mengklik tombol bayar, maka akan muncul halaman invoice yang berarti tiket film berhasil dibeli.
+
+## UP COMING – PEMBELI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/10728044-bf12-424b-b9a8-4b783de80d52) 
+Ketika pembeli masuk ke halaman up coming, maka pembeli dapat melihat film apa saja yang akan dating.
+
+## DETAIL PAGE UPCOMING – PEMBELI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/66b53071-6e16-43ae-8655-d8690ec750be)
+Ketika pembeli mengklik salah satu film, maka pembeli akan diarahkan ke detail page film tersebut yang dimana isinya sama seperti detail page sebelumnya, hanya saja untuk tanggal tayang, waktu tayang, harga tiket, review, dan buy tiket belum tersedia.
+
+## ABOUT US – PEMBELI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/1c66fb53-2542-4e83-8e37-05ee14af978b)
+Pada halaman about us ini sama saja seperti about us sebelumnya yang berisikan penjelasan mengenai aplikasi CinemaKW.
+
+## LOGOUT – PEMBELI
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/a7a9bc26-5efa-4110-abfa-67877df18e97)
+Ketika pembeli mengklik logout, maka pembeli akan keluar dari akun dan kembali ke halaman index.
 
 
 
