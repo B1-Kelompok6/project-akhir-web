@@ -1,19 +1,20 @@
-![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/e7ff628a-fcb3-495a-b919-84f080a8a9d6)
-
-![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/702b52c2-656e-426e-9f0e-fe4aacf8d778)
-
-![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/fce89fe6-7b52-4a43-a6e1-067718e39ab2)
-
-
-
-
 Project Akhir Praktikum WEB
 Kelompok B1-6  yang terdiri dari
 - Eggy B. Brillian (2109116057)
 - Namira Aida Hairunnisa (2109116048)
 - Ryanda Putra Nasrullah (2109116053)
 
+Web Hosting : http://eggy.rf.gd/
+
 **Memilih tema tiket bioskop dengan judul Cinema KW**
+
+STRUKTUR DATABASE:
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/e7ff628a-fcb3-495a-b919-84f080a8a9d6)
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/702b52c2-656e-426e-9f0e-fe4aacf8d778)
+
+![image](https://github.com/NamiraAidaHairunnisa/project-akhir-web/assets/119801869/fce89fe6-7b52-4a43-a6e1-067718e39ab2)
 
 # Tampilan Awal
 ![image](https://github.com/YandaPN/project-akhir-web-1/assets/118449655/19c01d09-b289-4d46-9631-f0325619e3f4)
