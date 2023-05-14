@@ -4,7 +4,7 @@ Kelompok B1-6  yang terdiri dari
 - Namira Aida Hairunnisa (2109116048)
 - Ryanda Putra Nasrullah (2109116053)
 
-Web Hosting : http://eggy.rf.gd/
+Web Hosting : http://eggy.rf.gd
 
 **Memilih tema tiket bioskop dengan judul Cinema KW**
 
