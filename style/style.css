@@ -20,11 +20,10 @@ body{
 }
 
 .wrapper{
-    position: fixed; /* tambahkan properti ini */
-    top: 0; /* atur jarak dari atas */
-    left: 0; /* atur jarak dari kiri */
-    right: 0; /* atur jarak dari kanan */
-    /* border: 2px solid white; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     margin-top: 0;
     display: flex;
     justify-content: space-between;
@@ -262,18 +261,15 @@ h1 {
     margin-right: 50px;
 }
 
-/* Styling untuk informasi detail */
 .tiket-detail-info {
     width: 50%;
 }
 
-/* Styling untuk judul film */
 .tiket-detail-info h2 {
     font-size: 36px;
     margin-bottom: 10px;
 }
 
-/* Styling untuk informasi tambahan */
 .tiket-detail-a {
     display: flex;
     justify-content: flex-start;
@@ -286,14 +282,12 @@ h1 {
     font-size: 18px;
 }
 
-/* Styling untuk deskripsi film */
 .tiket-detail-info p {
     font-size: 18px;
     margin-bottom: 10px;
     /* border: 2px solid red; */
 }
 
-/* Styling untuk link beli tiket */
 .tiket-detail-btn {
     display: inline-block;
     background-color: #FFD700;
